@@ -1,0 +1,6 @@
+<map id="Begruessend" name="Begruessend">
+<area shape="rect" id="node2" href="$class_dialogzustand.html" title="Die Klasse stellt die von den konkreten Zustandsklassen zu implementierende Schnittstelle dar..." alt="" coords="46,5,151,32"/>
+<area shape="rect" id="node3" href="$class_p_dialog.html" title="PDialog" alt="" coords="205,95,273,121"/>
+<area shape="rect" id="node5" href="$class_subjekt.html" title="Klasse zur Verwaltung von Beobachtern im Observer&#45;Pattern. " alt="" coords="284,5,351,32"/>
+<area shape="rect" id="node6" href="$class_beobachter.html" title="Interfaceklasse fuer Observer&#45;Pattern. " alt="" coords="375,5,463,32"/>
+</map>

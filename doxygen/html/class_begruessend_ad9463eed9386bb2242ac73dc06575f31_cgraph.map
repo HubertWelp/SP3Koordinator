@@ -1,0 +1,15 @@
+<map id="Begruessend::Begruessend" name="Begruessend::Begruessend">
+<area shape="rect" id="node2" href="$class_k_i_s.html#af06e6e9fcdeebd2b724b004f9f0a1c89" title="KIS::getPatientByRFID" alt="" coords="236,208,395,235"/>
+<area shape="rect" id="node12" href="$class_p_dialog.html#a5fe78b69d5a89afa2bdc70dd3df12b44" title="PDialog::getTimer" alt="" coords="252,259,379,285"/>
+<area shape="rect" id="node13" href="$class_timer.html#aecdf879e0f0a0ce3b8cd019671679757" title="Timer::setStopZeit" alt="" coords="250,309,381,336"/>
+<area shape="rect" id="node14" href="$class_timer.html#a3a8b5272198d029779dc9302a54305a8" title="Timer::start" alt="" coords="271,360,360,387"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a8f379789f4822f7146c174165ed5abba" title="finish_with_error" alt="" coords="479,5,597,32"/>
+<area shape="rect" id="node4" href="$class_patient.html#ac47ba6ec3b210a32a7fb8199b5973520" title="Patient::setID" alt="" coords="487,56,589,83"/>
+<area shape="rect" id="node5" href="$class_patient.html#a674650ce548c0cf0af3c5a28e656cfb7" title="Patient::setVorName" alt="" coords="466,107,610,133"/>
+<area shape="rect" id="node6" href="$class_patient.html#add7c9305b0a57c64a5e5b08e8184756a" title="Patient::setNachName" alt="" coords="461,157,615,184"/>
+<area shape="rect" id="node7" href="$class_patient.html#a67d978c2e76a0a2eed2ca93edb8da3d6" title="Patient::setRFID" alt="" coords="477,208,599,235"/>
+<area shape="rect" id="node8" href="$class_patient.html#a1d71b2a8519dffa1dc86abd887d0ecd4" title="Patient::getID" alt="" coords="487,259,589,285"/>
+<area shape="rect" id="node9" href="$class_patient.html#a556118294f257d4209fa7fd579246e0c" title="Patient::addBehandlung" alt="" coords="458,309,618,336"/>
+<area shape="rect" id="node10" href="$class_behandlung.html#ade8d409c06e73172c933edb8a2b32b05" title="Behandlung::setID" alt="" coords="473,360,603,387"/>
+<area shape="rect" id="node11" href="$class_behandlung.html#a4b7ea07ef73bc5d35f588022041bb7fb" title="Behandlung::setBezeichnung" alt="" coords="443,411,633,437"/>
+</map>

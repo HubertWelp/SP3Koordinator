@@ -1,0 +1,5 @@
+<map id="Dialogzustand" name="Dialogzustand">
+<area shape="rect" id="node2" href="$class_p_dialog.html" title="PDialog" alt="" coords="151,95,219,121"/>
+<area shape="rect" id="node4" href="$class_subjekt.html" title="Klasse zur Verwaltung von Beobachtern im Observer&#45;Pattern. " alt="" coords="237,5,303,32"/>
+<area shape="rect" id="node5" href="$class_beobachter.html" title="Interfaceklasse fuer Observer&#45;Pattern. " alt="" coords="327,5,415,32"/>
+</map>

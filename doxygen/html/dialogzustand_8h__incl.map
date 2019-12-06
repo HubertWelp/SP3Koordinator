@@ -1,0 +1,13 @@
+<map id="src/dialogzustand.h" name="src/dialogzustand.h">
+<area shape="rect" id="node2" href="$pdialog_8hpp.html" title="pdialog.hpp" alt="" coords="325,80,413,107"/>
+<area shape="rect" id="node3" href="$_subjekt_8h.html" title="Subjekt.h" alt="" coords="254,311,331,338"/>
+<area shape="rect" id="node5" href="$_beobachter_8h.html" title="../src/Beobachter.h" alt="" coords="126,393,259,420"/>
+<area shape="rect" id="node6" href="$scrs_8h.html" title="scrs.h" alt="" coords="219,155,278,181"/>
+<area shape="rect" id="node10" href="$roboter_8h.html" title="roboter.h" alt="" coords="432,155,505,181"/>
+<area shape="rect" id="node19" href="$timer_8h.html" title="timer.h" alt="" coords="432,229,495,256"/>
+<area shape="rect" id="node7" href="$mqttnode_8h.html" title="../src/mqttnode.h" alt="" coords="40,229,161,256"/>
+<area shape="rect" id="node9" href="$rfidtag_8h.html" title="rfidtag.h" alt="" coords="186,229,255,256"/>
+<area shape="rect" id="node11" href="$rosnode_8h.html" title="../src/rosnode.h" alt="" coords="580,229,693,256"/>
+<area shape="rect" id="node17" href="$raum_8h.html" title="raum.h" alt="" coords="957,229,1020,256"/>
+<area shape="rect" id="node18" href="$behandlung_8h.html" title="behandlung.h" alt="" coords="1077,311,1175,338"/>
+</map>

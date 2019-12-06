@@ -1,0 +1,7 @@
+<map id="Dialogzustand" name="Dialogzustand">
+<area shape="rect" id="node2" href="$class_begruessend.html" title="Die Klasse bildet den &quot;Begruessend&quot;&#45;Zustand im Patientendialogsystem ab. " alt="" coords="5,80,104,107"/>
+<area shape="rect" id="node3" href="$class_fahrend.html" title="Die Klasse bildet den &quot;Fahrend&quot;&#45;Zustand im Patientendialogsystem ab. " alt="" coords="128,80,197,107"/>
+<area shape="rect" id="node4" href="$class_fehler.html" title="Die Klasse bildet den &quot;Fehler&quot;&#45;Zustand im Patientendialogsystem ab. " alt="" coords="221,80,280,107"/>
+<area shape="rect" id="node5" href="$class_verabschiedend.html" title="Die Klasse bildet den &quot;Verabschiedend&quot;&#45;Zustand im Patientendialogsystem ab. " alt="" coords="304,80,419,107"/>
+<area shape="rect" id="node6" href="$class_wartend.html" title="Die Klasse bildet den &quot;Wartend&quot;&#45;Zustand im Patientendialogsystem ab. " alt="" coords="443,80,514,107"/>
+</map>

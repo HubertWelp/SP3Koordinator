@@ -1,0 +1,12 @@
+<map id="Begruessend::getRaeume" name="Begruessend::getRaeume">
+<area shape="rect" id="node2" href="$class_patient.html#ac079139156d17caa9cbbd29e749b3885" title="Patient::getBehandlungen" alt="" coords="237,81,408,108"/>
+<area shape="rect" id="node3" href="$class_g_i_s.html#a27945027bd1db98d6cfd303376f665b3" title="GIS::getRaumByBehandlung" alt="" coords="227,132,418,159"/>
+<area shape="rect" id="node10" href="$class_raum.html#a2f6cf064e07115b90735d815f141fb81" title="Raum::getRaumNummer" alt="" coords="239,183,407,209"/>
+<area shape="rect" id="node11" href="$class_raum.html#a2d32769a1493817f133726dcc6d5b88e" title="Raum::getGebaeudeNummer" alt="" coords="227,233,419,260"/>
+<area shape="rect" id="node4" href="$class_behandlung.html#a4374eebab2bf19cf7758b370a0267190" title="Behandlung::getID" alt="" coords="497,5,628,32"/>
+<area shape="rect" id="node5" href="$class_raum.html#a9c9b79698025f17ffe1a7b45325d94bf" title="Raum::setVerwendung" alt="" coords="485,56,640,83"/>
+<area shape="rect" id="node6" href="$class_behandlung.html#a8cdc8a64bc92e81a1117659da5be7e73" title="Behandlung::getBezeichnung" alt="" coords="467,107,658,133"/>
+<area shape="rect" id="node7" href="$class_raum.html#a05afa12e55161ae1f53590cb190fbae7" title="Raum::setGebaeudeNummer" alt="" coords="467,157,659,184"/>
+<area shape="rect" id="node8" href="$class_raum.html#aeaa9b74dc772e55a8f0f20066b40516e" title="Raum::setRaumNummer" alt="" coords="479,208,647,235"/>
+<area shape="rect" id="node9" href="$class_raum.html#aeaaaedfa3900b2a82255022ee56ebf9a" title="Raum::setKoordinaten" alt="" coords="487,259,639,285"/>
+</map>

@@ -1,0 +1,32 @@
+<map id="pds::MainWindow::MainWindow" name="pds::MainWindow::MainWindow">
+<area shape="rect" id="node2" href="$classpds_1_1_main_window.html#a832646cb3a34693f315d20d84ab41dc8" title="pds::MainWindow::aktualisiere" alt="" coords="263,77,463,104"/>
+<area shape="rect" id="node4" href="$classpds_1_1_main_window.html#a4326cf9da2e6f291288807d7e550c875" title="pds::MainWindow::abbrechen" alt="" coords="265,128,460,155"/>
+<area shape="rect" id="node7" href="$classpds_1_1_main_window.html#a303be1c647dfe2f067d5341f9de702e4" title="pds::MainWindow::onZiel1\lButton" alt="" coords="275,245,451,286"/>
+<area shape="rect" id="node10" href="$classpds_1_1_main_window.html#a326819cbbc8fd6f346bf7fa7a1912893" title="pds::MainWindow::onZiel2\lButton" alt="" coords="275,310,451,351"/>
+<area shape="rect" id="node11" href="$classpds_1_1_main_window.html#a9295ffb6323796b602bdb40294efeadb" title="pds::MainWindow::onZiel3\lButton" alt="" coords="275,375,451,417"/>
+<area shape="rect" id="node12" href="$classpds_1_1_main_window.html#a99934c6ccaf65aa597e326806ebd0891" title="pds::MainWindow::onZiel4\lButton" alt="" coords="275,441,451,482"/>
+<area shape="rect" id="node13" href="$classpds_1_1_main_window.html#ada8a8920a77fab3bd51f7d320c65153a" title="pds::MainWindow::onZiel5\lButton" alt="" coords="275,506,451,547"/>
+<area shape="rect" id="node14" href="$classpds_1_1_main_window.html#a54de612bad9934d118740779397e60f3" title="pds::MainWindow::onZiel6\lButton" alt="" coords="275,571,451,613"/>
+<area shape="rect" id="node15" href="$classpds_1_1_main_window.html#aeb68df4bd21c49b595d7a130e3cb1565" title="pds::MainWindow::onZiel7\lButton" alt="" coords="275,637,451,678"/>
+<area shape="rect" id="node16" href="$classpds_1_1_main_window.html#aefad36157c761ddb0dd4cc792f556bf9" title="pds::MainWindow::onZiel8\lButton" alt="" coords="275,179,451,221"/>
+<area shape="rect" id="node3" href="$class_p_dialog.html#a854f62b423b0aa3a57e7773a5f5ac92d" title="PDialog::getDialogzustand" alt="" coords="531,77,708,104"/>
+<area shape="rect" id="node5" href="$class_p_dialog.html#abfada048908b3e2e1dfa0e0d7ad64437" title="PDialog::auswahlAbbrechen" alt="" coords="526,128,713,155"/>
+<area shape="rect" id="node6" href="$class_dialogzustand.html#a7287ea6e4c2f9f589e9361a21554ecc4" title="Dialogzustand::auswahlAbbrechen" alt="" coords="776,31,999,57"/>
+<area shape="rect" id="node8" href="$class_p_dialog.html#a2c218e3cf96d0770591e2644965a4a28" title="PDialog::raumWaehlen" alt="" coords="541,417,697,444"/>
+<area shape="rect" id="node9" href="$class_dialogzustand.html#a5c980fe5b2439e9e30895c7668b3a8d5" title="Dialogzustand::raumWaehlen" alt="" coords="791,417,984,444"/>
+<area shape="rect" id="node17" href="$class_begruessend.html#a28498f8e90238618c5ae903bba8fbccb" title="auswaehlbare Raeume " alt="" coords="533,183,706,209"/>
+<area shape="rect" id="node28" href="$class_begruessend.html#ab5b991b25442e3767b001f6ee017c506" title="Begruessend::getVornamePatient" alt="" coords="511,244,728,271"/>
+<area shape="rect" id="node30" href="$class_begruessend.html#a0203dfedd55a51908e37e31feb425291" title="Begruessend::getNachname\lPatient" alt="" coords="526,317,713,358"/>
+<area shape="rect" id="node18" href="$class_patient.html#ac079139156d17caa9cbbd29e749b3885" title="Patient::getBehandlungen" alt="" coords="802,81,973,108"/>
+<area shape="rect" id="node19" href="$class_g_i_s.html#a27945027bd1db98d6cfd303376f665b3" title="GIS::getRaumByBehandlung" alt="" coords="792,132,983,159"/>
+<area shape="rect" id="node26" href="$class_raum.html#a2f6cf064e07115b90735d815f141fb81" title="Raum::getRaumNummer" alt="" coords="803,183,971,209"/>
+<area shape="rect" id="node27" href="$class_raum.html#a2d32769a1493817f133726dcc6d5b88e" title="Raum::getGebaeudeNummer" alt="" coords="791,233,983,260"/>
+<area shape="rect" id="node20" href="$class_behandlung.html#a4374eebab2bf19cf7758b370a0267190" title="Behandlung::getID" alt="" coords="1077,5,1208,32"/>
+<area shape="rect" id="node21" href="$class_raum.html#a9c9b79698025f17ffe1a7b45325d94bf" title="Raum::setVerwendung" alt="" coords="1065,56,1220,83"/>
+<area shape="rect" id="node22" href="$class_behandlung.html#a8cdc8a64bc92e81a1117659da5be7e73" title="Behandlung::getBezeichnung" alt="" coords="1047,107,1238,133"/>
+<area shape="rect" id="node23" href="$class_raum.html#a05afa12e55161ae1f53590cb190fbae7" title="Raum::setGebaeudeNummer" alt="" coords="1047,157,1239,184"/>
+<area shape="rect" id="node24" href="$class_raum.html#aeaa9b74dc772e55a8f0f20066b40516e" title="Raum::setRaumNummer" alt="" coords="1059,208,1227,235"/>
+<area shape="rect" id="node25" href="$class_raum.html#aeaaaedfa3900b2a82255022ee56ebf9a" title="Raum::setKoordinaten" alt="" coords="1067,259,1219,285"/>
+<area shape="rect" id="node29" href="$class_patient.html#a22813dc28ae5dfda3c6b048a4b597d16" title="Patient::getVorName" alt="" coords="815,284,959,311"/>
+<area shape="rect" id="node31" href="$class_patient.html#ab1fd3a01064ebeb2b479d61504115cfd" title="Patient::getNachName" alt="" coords="810,335,965,361"/>
+</map>

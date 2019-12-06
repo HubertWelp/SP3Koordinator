@@ -1,0 +1,4 @@
+<map id="PDialog" name="PDialog">
+<area shape="rect" id="node3" href="$class_subjekt.html" title="Klasse zur Verwaltung von Beobachtern im Observer&#45;Pattern. " alt="" coords="101,5,167,32"/>
+<area shape="rect" id="node4" href="$class_beobachter.html" title="Interfaceklasse fuer Observer&#45;Pattern. " alt="" coords="191,5,279,32"/>
+</map>

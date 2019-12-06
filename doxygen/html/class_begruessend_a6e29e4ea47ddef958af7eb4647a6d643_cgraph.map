@@ -1,0 +1,6 @@
+<map id="Begruessend::~Begruessend" name="Begruessend::~Begruessend">
+<area shape="rect" id="node2" href="$class_p_dialog.html#a5fe78b69d5a89afa2bdc70dd3df12b44" title="PDialog::getTimer" alt="" coords="244,5,371,32"/>
+<area shape="rect" id="node3" href="$class_timer.html#a15ec31f2478a22d732b8d09ef4e92982" title="Timer::getBusy" alt="" coords="252,56,363,83"/>
+<area shape="rect" id="node5" href="$class_timer.html#a63f0eb44b27402196590a03781515dba" title="Timer::stop" alt="" coords="263,107,351,133"/>
+<area shape="rect" id="node4" href="$class_subjekt.html#a2d7b52ea402aafd96cbd57b3d71786de" title="benachrichtigt alle Beobachter ueber Aenderungen " alt="" coords="419,56,577,83"/>
+</map>

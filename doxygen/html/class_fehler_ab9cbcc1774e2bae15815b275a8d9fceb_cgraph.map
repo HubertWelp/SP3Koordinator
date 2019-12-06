@@ -1,0 +1,5 @@
+<map id="Fehler::Fehler" name="Fehler::Fehler">
+<area shape="rect" id="node2" href="$class_p_dialog.html#a5fe78b69d5a89afa2bdc70dd3df12b44" title="PDialog::getTimer" alt="" coords="158,5,285,32"/>
+<area shape="rect" id="node3" href="$class_timer.html#aecdf879e0f0a0ce3b8cd019671679757" title="Timer::setStopZeit" alt="" coords="156,56,287,83"/>
+<area shape="rect" id="node4" href="$class_timer.html#a3a8b5272198d029779dc9302a54305a8" title="Timer::start" alt="" coords="177,107,266,133"/>
+</map>

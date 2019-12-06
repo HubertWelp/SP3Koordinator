@@ -1,0 +1,30 @@
+<map id="src/Subjekt.h" name="src/Subjekt.h">
+<area shape="rect" id="node2" href="$pdialog_8hpp.html" title="src/pdialog.hpp" alt="" coords="297,229,408,256"/>
+<area shape="rect" id="node21" href="$scrs_8h.html" title="src/scrs.h" alt="" coords="21,155,101,181"/>
+<area shape="rect" id="node23" href="$mqttnode_8h.html" title="src/mqttnode.h" alt="" coords="141,80,250,107"/>
+<area shape="rect" id="node25" href="$roboter_8h.html" title="src/roboter.h" alt="" coords="415,155,509,181"/>
+<area shape="rect" id="node27" href="$timer_8h.html" title="src/timer.h" alt="" coords="940,155,1024,181"/>
+<area shape="rect" id="node29" href="$_subjekt_8cpp.html" title="src/Subjekt.cpp" alt="" coords="492,80,605,107"/>
+<area shape="rect" id="node3" href="$dialogzustand_8h.html" title="src/dialogzustand.h" alt="" coords="745,304,880,331"/>
+<area shape="rect" id="node6" href="$main__window_8hpp.html" title="src/main_window.hpp" alt="" coords="904,453,1052,480"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="Qt based gui. " alt="" coords="327,528,424,555"/>
+<area shape="rect" id="node14" href="$pdialog_8cpp.html" title="src/pdialog.cpp" alt="" coords="227,453,337,480"/>
+<area shape="rect" id="node4" href="$begruessend_8h.html" title="src/begruessend.h" alt="" coords="559,379,688,405"/>
+<area shape="rect" id="node9" href="$tuimanager_8h.html" title="src/tuimanager.h" alt="" coords="1076,453,1195,480"/>
+<area shape="rect" id="node12" href="$wartend_8h.html" title="src/wartend.h" alt="" coords="382,379,483,405"/>
+<area shape="rect" id="node16" href="$fahrend_8h.html" title="src/fahrend.h" alt="" coords="763,379,862,405"/>
+<area shape="rect" id="node18" href="$dialogzustand_8cpp.html" title="src/dialogzustand.cpp" alt="" coords="886,379,1035,405"/>
+<area shape="rect" id="node19" href="$verabschiedend_8h.html" title="src/verabschiedend.h" alt="" coords="1059,379,1206,405"/>
+<area shape="rect" id="node20" href="$fehler_8h.html" title="src/fehler.h" alt="" coords="1281,379,1368,405"/>
+<area shape="rect" id="node5" href="$begruessend_8cpp.html" title="src/begruessend.cpp" alt="" coords="552,453,695,480"/>
+<area shape="rect" id="node11" href="$wartend_8cpp.html" title="src/wartend.cpp" alt="" coords="413,453,527,480"/>
+<area shape="rect" id="node8" href="$main__window_8cpp.html" title="Implementation for the qt gui. " alt="" coords="900,528,1048,555"/>
+<area shape="rect" id="node10" href="$tuimanager_8cpp.html" title="src/tuimanager.cpp" alt="" coords="1073,528,1206,555"/>
+<area shape="rect" id="node13" href="$fehler_8cpp.html" title="src/fehler.cpp" alt="" coords="1219,453,1321,480"/>
+<area shape="rect" id="node15" href="$verabschiedend_8cpp.html" title="src/verabschiedend.cpp" alt="" coords="719,453,879,480"/>
+<area shape="rect" id="node17" href="$fahrend_8cpp.html" title="src/fahrend.cpp" alt="" coords="1345,453,1457,480"/>
+<area shape="rect" id="node22" href="$scrs_8cpp.html" title="src/scrs.cpp" alt="" coords="5,229,100,256"/>
+<area shape="rect" id="node24" href="$mqttnode_8cpp.html" title="src/mqttnode.cpp" alt="" coords="175,155,298,181"/>
+<area shape="rect" id="node26" href="$roboter_8cpp.html" title="src/roboter.cpp" alt="" coords="433,229,542,256"/>
+<area shape="rect" id="node28" href="$timer_8cpp.html" title="src/timer.cpp" alt="" coords="1427,229,1526,256"/>
+</map>

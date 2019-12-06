@@ -1,0 +1,18 @@
+<map id="dialog.h" name="dialog.h">
+<area shape="rect" id="node2" href="$dialogzustand_8h.html" title="dialogzustand.h" alt="" coords="351,80,464,107"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Qt based gui. " alt="" coords="88,304,162,331"/>
+<area shape="rect" id="node10" href="$dialog_8cpp.html" title="dialog.cpp" alt="" coords="819,229,900,256"/>
+<area shape="rect" id="node3" href="$begruessend_8h.html" title="begruessend.h" alt="" coords="668,155,774,181"/>
+<area shape="rect" id="node5" href="$tuimanager_8h.html" title="tuimanager.h" alt="" coords="331,229,428,256"/>
+<area shape="rect" id="node9" href="$wartend_8h.html" title="wartend.h" alt="" coords="564,155,643,181"/>
+<area shape="rect" id="node13" href="$fahrend_8h.html" title="fahrend.h" alt="" coords="464,155,540,181"/>
+<area shape="rect" id="node15" href="$dialogzustand_8cpp.html" title="dialogzustand.cpp" alt="" coords="24,155,151,181"/>
+<area shape="rect" id="node16" href="$verabschiedend_8h.html" title="verabschiedend.h" alt="" coords="175,155,299,181"/>
+<area shape="rect" id="node17" href="$fehler_8h.html" title="fehler.h" alt="" coords="375,155,440,181"/>
+<area shape="rect" id="node4" href="$begruessend_8cpp.html" title="begruessend.cpp" alt="" coords="555,229,676,256"/>
+<area shape="rect" id="node8" href="$wartend_8cpp.html" title="wartend.cpp" alt="" coords="701,229,794,256"/>
+<area shape="rect" id="node7" href="$tuimanager_8cpp.html" title="tuimanager.cpp" alt="" coords="324,304,435,331"/>
+<area shape="rect" id="node11" href="$fehler_8cpp.html" title="fehler.cpp" alt="" coords="452,229,531,256"/>
+<area shape="rect" id="node12" href="$verabschiedend_8cpp.html" title="verabschiedend.cpp" alt="" coords="168,229,306,256"/>
+<area shape="rect" id="node14" href="$fahrend_8cpp.html" title="fahrend.cpp" alt="" coords="53,229,144,256"/>
+</map>
