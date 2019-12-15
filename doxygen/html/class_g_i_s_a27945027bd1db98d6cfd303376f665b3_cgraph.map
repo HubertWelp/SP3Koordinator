@@ -1,8 +1,0 @@
-<map id="GIS::getRaumByBehandlung" name="GIS::getRaumByBehandlung">
-<area shape="rect" id="node2" href="$class_behandlung.html#a4374eebab2bf19cf7758b370a0267190" title="Behandlung::getID" alt="" coords="275,5,405,32"/>
-<area shape="rect" id="node3" href="$class_raum.html#a9c9b79698025f17ffe1a7b45325d94bf" title="Raum::setVerwendung" alt="" coords="263,56,417,83"/>
-<area shape="rect" id="node4" href="$class_behandlung.html#a8cdc8a64bc92e81a1117659da5be7e73" title="Behandlung::getBezeichnung" alt="" coords="245,107,435,133"/>
-<area shape="rect" id="node5" href="$class_raum.html#a05afa12e55161ae1f53590cb190fbae7" title="Raum::setGebaeudeNummer" alt="" coords="244,157,436,184"/>
-<area shape="rect" id="node6" href="$class_raum.html#aeaa9b74dc772e55a8f0f20066b40516e" title="Raum::setRaumNummer" alt="" coords="256,208,424,235"/>
-<area shape="rect" id="node7" href="$class_raum.html#aeaaaedfa3900b2a82255022ee56ebf9a" title="Raum::setKoordinaten" alt="" coords="264,259,416,285"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Verabschiedend::Verabschiedend" name="Verabschiedend::Verabschiedend">
-<area shape="rect" id="node2" href="$class_p_dialog.html#a5fe78b69d5a89afa2bdc70dd3df12b44" title="PDialog::getTimer" alt="" coords="271,5,398,32"/>
-<area shape="rect" id="node3" href="$class_timer.html#aecdf879e0f0a0ce3b8cd019671679757" title="Timer::setStopZeit" alt="" coords="269,56,400,83"/>
-<area shape="rect" id="node4" href="$class_timer.html#a3a8b5272198d029779dc9302a54305a8" title="Timer::start" alt="" coords="290,107,379,133"/>
-</map>

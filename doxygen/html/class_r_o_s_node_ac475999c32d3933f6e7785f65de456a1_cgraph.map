@@ -1,6 +1,0 @@
-<map id="ROSNode::ROSNode" name="ROSNode::ROSNode">
-<area shape="rect" id="node2" href="$class_r_o_s_node.html#acd42494324a278470c3d91d0f1592bd5" title="ROSNode::changeStringPublisher\lTopic" alt="" coords="204,5,424,47"/>
-<area shape="rect" id="node3" href="$class_r_o_s_node.html#a5862781cb9b29ea575aae281e929ceba" title="ROSNode::changePosePublisher\lTopic" alt="" coords="206,71,422,112"/>
-<area shape="rect" id="node4" href="$class_r_o_s_node.html#a27314ebbcbad81b530f10412fda44333" title="ROSNode::changeSubscriber\lTopic" alt="" coords="217,136,411,177"/>
-<area shape="rect" id="node5" href="$class_r_o_s_node.html#aa97b420f6e845b7c4adce5e26e87a071" title="ROSNode::msgReceivedCallback" alt="" coords="472,143,693,170"/>
-</map>

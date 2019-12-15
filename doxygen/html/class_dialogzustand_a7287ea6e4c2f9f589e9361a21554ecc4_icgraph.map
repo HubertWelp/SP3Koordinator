@@ -1,7 +1,0 @@
-<map id="Dialogzustand::auswahlAbbrechen" name="Dialogzustand::auswahlAbbrechen">
-<area shape="rect" id="node2" href="$class_p_dialog.html#abfada048908b3e2e1dfa0e0d7ad64437" title="PDialog::auswahlAbbrechen" alt="" coords="276,64,463,91"/>
-<area shape="rect" id="node3" href="$classpds_1_1_main_window.html#a4326cf9da2e6f291288807d7e550c875" title="pds::MainWindow::abbrechen" alt="" coords="511,5,705,32"/>
-<area shape="rect" id="node5" href="$classpds_1_1_main_window.html#aefad36157c761ddb0dd4cc792f556bf9" title="pds::MainWindow::onZiel8\lButton" alt="" coords="520,57,696,98"/>
-<area shape="rect" id="node6" href="$class_t_u_i_manager.html#a640f154b796d42de1a0de5a8e2743f60" title="Call&#45;Back&#45;Methode fuer Subjekt. " alt="" coords="524,123,692,149"/>
-<area shape="rect" id="node4" href="$classpds_1_1_main_window.html#a980d2a71a326e4da375bfb0bb221d7d2" title="pds::MainWindow::MainWindow" alt="" coords="753,35,963,61"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Begruessend::raumWaehlen" name="Begruessend::raumWaehlen">
-<area shape="rect" id="node2" href="$class_p_dialog.html#a88472ae842ca2d65acf3414c8ec335f3" title="PDialog::getRoboter" alt="" coords="241,5,381,32"/>
-<area shape="rect" id="node3" href="$class_r_o_s_node.html#a9f81309f0ba04d73a7d41cf17edd550a" title="ROSNode::publish" alt="" coords="245,56,376,83"/>
-<area shape="rect" id="node4" href="$class_p_dialog.html#ac750768cc7acf4686d7be2d5ae833a8c" title="PDialog::setZustand" alt="" coords="240,107,381,133"/>
-<area shape="rect" id="node5" href="$class_subjekt.html#a2d7b52ea402aafd96cbd57b3d71786de" title="benachrichtigt alle Beobachter ueber Aenderungen " alt="" coords="429,107,588,133"/>
-</map>

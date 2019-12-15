@@ -1,6 +1,0 @@
-<map id="Subjekt" name="Subjekt">
-<area shape="rect" id="node2" href="$class_p_dialog.html" title="PDialog" alt="" coords="5,80,73,107"/>
-<area shape="rect" id="node3" href="$class_roboter.html" title="Roboter" alt="" coords="97,80,165,107"/>
-<area shape="rect" id="node4" href="$class_s_c_r_s.html" title="Abstraktion eines Smart Connected RFID Sensors. " alt="" coords="189,80,249,107"/>
-<area shape="rect" id="node5" href="$class_timer.html" title="Timer" alt="" coords="273,80,328,107"/>
-</map>
