@@ -13,7 +13,7 @@ UDPNode::UDPNode(unsigned short serverPort,QObject *parent) : QObject(parent)
 //    msgReceivedCallback=nullptr;
     socket.bind(serverPort);
 //    connect(&socket,&QUdpSocket::readyRead,this,&UDPNode::processPendingDatagrams);
-    connect(&socket,SIGNAL(readyRead()),this,SLOT(processPendingDatagrams));
+    connect(&socket,SIGNAL(readyRead()),this,SLOT(processPendingDatagrams()));
 }
 
 void UDPNode::processPendingDatagrams()
