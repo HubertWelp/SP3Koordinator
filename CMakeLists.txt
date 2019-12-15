@@ -3,6 +3,7 @@
 ##############################################################################
 
 cmake_minimum_required(VERSION 2.8.0)
+#set(CMAKE_AUTOMOC ON)
 project(SP3Koordinator)
 
 ##############################################################################
@@ -23,7 +24,7 @@ catkin_package()
 
 # this comes from qt_build's qt-ros.cmake which is automatically 
 # included via the dependency call in package.xml
-rosbuild_prepare_qt4(QtCore QtGui) # Add the appropriate components to the component list here
+rosbuild_prepare_qt4(QtCore QtGui QtNetwork) # Add the appropriate components to the component list here
 
 ##############################################################################
 # mysqlclient
