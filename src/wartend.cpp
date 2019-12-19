@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "begruessend.h"
 
-Wartend::Wartend(PDialog* dlg)
+Wartend::Wartend(Koordinator* dlg)
     : Dialogzustand(dlg)
 {
     //ctor
@@ -19,4 +19,11 @@ void Wartend::rfidEmpfangen(unsigned long ru)
     dialog->setZustand(new Begruessend(ru,dialog));
 
     delete this;
+}
+
+void Wartend::objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s)
+{
+    //...
+//    dialog->setZustand(new Begruessend(ru,dialog));
+//    delete this;
 }

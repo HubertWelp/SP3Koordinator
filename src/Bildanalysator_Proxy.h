@@ -17,19 +17,25 @@
  */
 
 #include "../src/Subjekt.h"
-#include "../src/mqttnode.h"
-#include "rfidtag.h"
+#include "udpnode.hpp"
 
 
-class Bildanalysator_Proxy : public Subjekt, public MQTTNode
+
+class Bildanalysator_Proxy : public Subjekt, public UDPNode
 {
 public:
+    enum ObjektTyp {Snickers,MilkyWay,Maoam,Schokoriegel};
     Bildanalysator_Proxy ();/* verhindert, dass ein Objekt von außerhalb von N erzeugt wird. */
                   // protected, wenn man von der Klasse noch erben möchte
 
-    unsigned long long getRFIDUID();
     static int hexStringToByteStream(unsigned char* byte, const char* hex, int len);
     static void byteStreamToHexString(char* hex, const unsigned char* byte, int len);
+
+
+    int bildanalyseStarten(ObjektTyp suessigkeit);
+    int getObjektPosition();
+    int getObjektOrientierung();
+    int getObjektBreite();
 
 private:
     /** @brief setTagConent
@@ -39,11 +45,14 @@ private:
     * @param [in] content Buffer des byteweisen Inhalt eines 15693-RFID-Tag inklusive RFID-Unique Identifier
     * @param [in] len Laenge des Buffers in Byte
     */
-    void setTagContent(const unsigned char* content, int len);
-    void onMessageReceived(char* t, char* m);
-    RFIDTag receivedTag;
+//    void setTagContent(const unsigned char* content, int len);
 
 
+
+
+    // UDPNode interface
+protected:
+    void messageReceived(string msg);
 };
 
 #endif // SCRS

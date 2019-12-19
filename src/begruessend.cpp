@@ -7,7 +7,7 @@
 #include <list>
 #include <iterator>
 
-Begruessend::Begruessend(unsigned long long ru, PDialog* dlg)
+Begruessend::Begruessend(unsigned long long ru, Koordinator* dlg)
     : Dialogzustand(dlg)
 {
     //ctor

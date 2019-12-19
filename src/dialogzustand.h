@@ -11,22 +11,30 @@
 */
 
 #ifndef Q_MOC_RUN
-#include "pdialog.hpp"
+#include "koordinator.hpp"
 #endif
 
 class Dialogzustand
 {
 public:
-    Dialogzustand(PDialog* dlg);
+    Dialogzustand(Koordinator* dlg);
     virtual ~Dialogzustand();
+
     virtual void rfidEmpfangen(unsigned long ru) {};
     virtual void auswahlAbbrechen() {};
     virtual void raumWaehlen(unsigned short rNr) {};
     virtual void angekommen() {};
     virtual void onTimer() {};
     virtual void fahrenAbgebrochen(string grund=""){};
+
+    virtual void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s){};
+    virtual void objektGefunden(){};
+    virtual void objektNichtGefunden(){};
+    virtual void objektUebergeben(){};
+
+    void setZustand(Dialogzustand* z);
 protected:
-    PDialog* dialog;
+    Koordinator* dialog;
 private:
 
 

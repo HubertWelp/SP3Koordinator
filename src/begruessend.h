@@ -22,11 +22,11 @@ using namespace std;
 class Begruessend : public Dialogzustand
 {
 public:
-    Begruessend(unsigned long long ru, PDialog* dlg);
+    Begruessend(unsigned long long ru, Koordinator* dlg);
     virtual ~Begruessend();
     /** @brief Patient moechte nirgendwohin geleitet werden
     *
-    * Mit der Methode wird dem PDialog mitgeteilt, dass der Patient die Raumauswahl abgebrochen hat.
+    * Mit der Methode wird dem Koordinator mitgeteilt, dass der Patient die Raumauswahl abgebrochen hat.
     * Die Methode wechselt den Dialogzustand zu Wartend.
     */
     void auswahlAbbrechen();

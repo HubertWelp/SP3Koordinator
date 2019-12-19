@@ -2,7 +2,7 @@
 #include "wartend.h"
 #include <iostream>
 using namespace std;
-Fehler::Fehler(PDialog* dlg)
+Fehler::Fehler(Koordinator* dlg)
     : Dialogzustand(dlg)
 {
     printf("F E H L E R\n");

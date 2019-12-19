@@ -3,7 +3,7 @@
 #include "wartend.h"
 
 
-Verabschiedend::Verabschiedend(PDialog* dlg)
+Verabschiedend::Verabschiedend(Koordinator* dlg)
     : Dialogzustand(dlg)
 {
     //ctor

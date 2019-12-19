@@ -28,7 +28,7 @@ using namespace Qt;
 ** Implementation [MainWindow]
 *****************************************************************************/
 
-MainWindow::MainWindow(PDialog* dlg, QWidget *parent)
+MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     : QDialog(parent)
     , dialog(dlg)
 {

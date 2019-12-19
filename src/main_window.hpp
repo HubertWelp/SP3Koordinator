@@ -12,7 +12,7 @@
 ** Includes
 *****************************************************************************/
 #ifndef Q_MOC_RUN
-#include "pdialog.hpp"
+#include "koordinator.hpp"
 #include "dialogzustand.h"
 #include "fehler.h"
 #include "fahrend.h"
@@ -44,7 +44,7 @@ class MainWindow : public QDialog{
 Q_OBJECT
 
 public:
-    MainWindow(PDialog* dlg, QWidget *parent = 0);
+    MainWindow(Koordinator* dlg, QWidget *parent = 0);
 	~MainWindow();
 
 
@@ -76,7 +76,7 @@ private:
     QLabel* nameLabel;
     QLabel* hinweisLabel;
     QLabel* zustandLabel;
-    PDialog* dialog;
+    Koordinator* dialog;
     QPixmap* wartendSymbol;
     QPixmap* fehlerSymbol;
     QPixmap* verabschiedendSymbol;

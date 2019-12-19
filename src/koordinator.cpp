@@ -1,7 +1,7 @@
-#include "pdialog.hpp"
+#include "koordinator.hpp"
 #include "wartend.h"
 #include <iostream>
-PDialog::PDialog(int argc, char **argv)
+Koordinator::Koordinator(int argc, char **argv)
 {
     //ctor
     m_bildanalysatorProxy = new Bildanalysator_Proxy();
@@ -13,7 +13,7 @@ PDialog::PDialog(int argc, char **argv)
     zustand = nullptr;
 }
 
-PDialog::~PDialog()
+Koordinator::~Koordinator()
 {
     //dtor
     delete m_bildanalysatorProxy;
@@ -21,7 +21,7 @@ PDialog::~PDialog()
     delete m_timer;
 }
 
-void PDialog::aktualisiere(Subjekt *s)
+void Koordinator::aktualisiere(Subjekt *s)
 {
     if(dynamic_cast<Bildanalysator_Proxy*>(s))
         handleBildanalysatorNachrichten();
@@ -31,13 +31,13 @@ void PDialog::aktualisiere(Subjekt *s)
         handleTimerNachrichten();}
 
 
-void PDialog::handleBildanalysatorNachrichten()
+void Koordinator::handleBildanalysatorNachrichten()
 {
-    cout << "RFIDUID empfangen: " << m_bildanalysatorProxy->getRFIDUID() << endl;
-    rfidEmpfangen( m_bildanalysatorProxy->getRFIDUID());
+//    cout << "RFIDUID empfangen: " << m_bildanalysatorProxy->getRFIDUID() << endl;
+//    rfidEmpfangen( m_bildanalysatorProxy->getRFIDUID());
 }
 
-void PDialog::handleRoboterNachrichten()
+void Koordinator::handleRoboterNachrichten()
 {
     string nachricht =  m_roboter->getStatus();
 //    cout << "Roboterstatus empfangen: " <<  nachricht  << endl;
@@ -54,58 +54,58 @@ void PDialog::handleRoboterNachrichten()
 //    }
 }
 
-void PDialog::handleTimerNachrichten()
+void Koordinator::handleTimerNachrichten()
 {
     onTimer();
 }
 
-void PDialog::setZustand(Dialogzustand* z)
+void Koordinator::setZustand(Dialogzustand* z)
 {
     zustand = z;
     this->benachrichtige();
     Q_EMIT changed();
 }
 
-void PDialog::rfidEmpfangen(unsigned long ru)
+void Koordinator::rfidEmpfangen(unsigned long ru)
 {
     zustand->rfidEmpfangen(ru);
 }
-void PDialog::auswahlAbbrechen()
+void Koordinator::auswahlAbbrechen()
 {
     zustand->auswahlAbbrechen();
 }
-void PDialog::raumWaehlen(unsigned short rNr)
+void Koordinator::raumWaehlen(unsigned short rNr)
 {
     zustand->raumWaehlen(rNr);
 }
-void PDialog::angekommen()
+void Koordinator::angekommen()
 {
     zustand->angekommen();
 }
-void PDialog::onTimer()
+void Koordinator::onTimer()
 {
     zustand->onTimer();
 
 }
-void PDialog::fahrenAbgebrochen(string grund)
+void Koordinator::fahrenAbgebrochen(string grund)
 {
     zustand->fahrenAbgebrochen(grund);
 }
 
 
-Dialogzustand* PDialog::getDialogzustand()
+Dialogzustand* Koordinator::getDialogzustand()
 {
     return zustand;
 }
 
 
-Roboter* PDialog::getRoboter()
+Roboter* Koordinator::getRoboter()
 {
     return m_roboter;
 }
 
 
-Timer* PDialog::getTimer()
+Timer* Koordinator::getTimer()
 {
     return m_timer;
 }

@@ -4,7 +4,7 @@
 #include "fehler.h"
 #include "roboter.h"
 
-Fahrend::Fahrend(PDialog* dlg)
+Fahrend::Fahrend(Koordinator* dlg)
     : Dialogzustand(dlg)
 {
     //ctor

@@ -1,5 +1,5 @@
-#ifndef PDIALOG_H
-#define PDIALOG_H
+#ifndef KOORDINATOR_H
+#define KOORDINATOR_H
 #ifndef Q_MOC_RUN
 #include "Subjekt.h"
 #include "Bildanalysator_Proxy.h"
@@ -10,19 +10,26 @@
 #include <QtCore/QObject>
 class Dialogzustand;
 
-class PDialog : public QObject, public Subjekt, public Beobachter
+class Koordinator : public QObject, public Subjekt, public Beobachter
 {
 Q_OBJECT
 public:
-    PDialog(int argc=1, char **argv=(char *[]){"pds"});
-    virtual ~PDialog();
+    Koordinator(int argc=1, char **argv=(char *[]){"pds"});
+    virtual ~Koordinator();
     void rfidEmpfangen(unsigned long ru);
     void auswahlAbbrechen();
     void raumWaehlen(unsigned short rNr);
     void angekommen();
-    void onTimer();
+
     void fahrenAbgebrochen(string grund="");
+
+    void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s);
+    void objektGefunden();
+    void objektNichtGefunden();
+    void objektUebergeben();
     void setZustand(Dialogzustand* z);
+    void onTimer();
+
     Dialogzustand* getDialogzustand();
     Roboter* getRoboter();
     Timer* getTimer();
@@ -44,4 +51,4 @@ private:
 
 };
 
-#endif // PDIALOG_H
+#endif // KOORDINATOR_H

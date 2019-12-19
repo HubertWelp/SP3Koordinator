@@ -7,7 +7,7 @@
 #include <fcntl.h>
 using namespace std;
 
-TUIManager::TUIManager(PDialog* dlg)
+TUIManager::TUIManager(Koordinator* dlg)
     : dialog(dlg)
 {
     //ctor

@@ -18,11 +18,11 @@
 class Fehler : public Dialogzustand
 {
 public:
-    Fehler(PDialog* dlg);
+    Fehler(Koordinator* dlg);
     virtual ~Fehler();
     /** @brief Beendigung des Verabschiedungsbildschirms
     *
-    * Mit der Methode wird dem PDialog mitgeteilt, dass der Fehlerbildschirm beendet werden sollte.
+    * Mit der Methode wird dem Koordinator mitgeteilt, dass der Fehlerbildschirm beendet werden sollte.
     * Die Methode sollte durch einen Timer aufgerufen werden, der beim Abbruch eines Geleitvorganges
     * gestartet wird (also beim Eintritt in den Fehler-Zustand). Die Methode wechselt den Dialogzustand zu Wartend.
     */

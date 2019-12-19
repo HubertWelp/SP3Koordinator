@@ -13,11 +13,10 @@
 #include <QApplication>
 #include "../src/main_window.hpp"
 #include <iostream>
-#include "../src/mqttnode.h"
 #include <string.h>
 #include "../src/rosnode.h"
 #ifndef Q_MOC_RUN
-#include "../src/pdialog.hpp"
+#include "koordinator.hpp"
 #endif
 #include "../src/tuimanager.h"
 #include "wartend.h"
@@ -41,16 +40,17 @@ int main(int argc, char **argv) {
     ** Qt
     **********************/
     QApplication app(argc, argv);
-    PDialog pD;
+    Koordinator pD;
     pds::MainWindow w(&pD);
     pD.setZustand(new Wartend(&pD));
     w.show();
+    pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
     app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));
     int result = app.exec();
 
     return result;
 
-//    PDialog pD;
+//    Koordinator pD;
 //    TUIManager tm(&pD);
 //    pD.setZustand(new Wartend(&pD));
 //    std::cout << "Schleife";

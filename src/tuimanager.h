@@ -12,7 +12,7 @@
 class TUIManager : public Beobachter
 {
     public:
-        TUIManager(PDialog* dlg);
+        TUIManager(Koordinator* dlg);
         ~TUIManager();
         void aktualisiere(Subjekt* s);
     protected:
@@ -25,7 +25,7 @@ class TUIManager : public Beobachter
         void handleVerabschiedend(Verabschiedend* dz);
         int kbhit();
 
-        PDialog* dialog;
+        Koordinator* dialog;
 //        UI* ui;
 };
 

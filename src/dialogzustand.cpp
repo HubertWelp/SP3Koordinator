@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "dialogzustand.h"
 
-Dialogzustand::Dialogzustand(PDialog* dlg)
+Dialogzustand::Dialogzustand(Koordinator* dlg)
     : dialog(dlg)
 {
     //ctor

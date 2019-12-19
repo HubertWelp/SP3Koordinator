@@ -18,18 +18,18 @@
 class Fahrend : public Dialogzustand
 {
 public:
-    Fahrend(PDialog* dlg);
+    Fahrend(Koordinator* dlg);
     virtual ~Fahrend();
     /** @brief Roboter ist am Ziel angekommen
     *
-    * Mit der Methode wird dem PDialog mitgeteilt, dass der Roboter das ausgewaehlte Ziel erreicht hat.
+    * Mit der Methode wird dem Koordinator mitgeteilt, dass der Roboter das ausgewaehlte Ziel erreicht hat.
     * Die Methode wechselt den Dialogzustand zu Verabschiedend.
     */
     void angekommen();
 
     /** @brief Roboter hat Fahrt abgebrochen
     *
-    * Mit der Methode wird dem PDialog mitgeteilt, dass der Roboter das ausgewaehlte Ziel nicht erreichen konnte
+    * Mit der Methode wird dem Koordinator mitgeteilt, dass der Roboter das ausgewaehlte Ziel nicht erreichen konnte
     * und die Fahrt abgebrochen hat. .
     * Die Methode wechselt den Dialogzustand zu Fehler.
     *

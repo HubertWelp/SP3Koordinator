@@ -6,19 +6,18 @@ using namespace std;
 
 Bildanalysator_Proxy::Bildanalysator_Proxy()
 {
-    subscribe("RFID1/Tagdaten");
+
 
 }
 
-unsigned long long Bildanalysator_Proxy::getRFIDUID()
-{
-    return receivedTag.getRFIDNr();;
-}
 
-void Bildanalysator_Proxy::onMessageReceived(char *t, char *m)
+
+void Bildanalysator_Proxy::messageReceived(string msg)
 {
-    hexStringToByteStream((unsigned char*)&receivedTag,(m+2),240);
+    std::cout << "Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
+    // Nachricht analysieren
     benachrichtige();
+
 }
 
 void Bildanalysator_Proxy::byteStreamToHexString(char* hex, const unsigned char* byte, int len)
@@ -31,13 +30,24 @@ void Bildanalysator_Proxy::byteStreamToHexString(char* hex, const unsigned char*
     hex[i*2] = 0;
 }
 
-void Bildanalysator_Proxy::setTagContent(const unsigned char *content, int len)
+int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
 {
-    if(len>sizeof (RFIDTag))
-        memcpy(&receivedTag,content,sizeof (RFIDTag));
-    else
-        memcpy(&receivedTag,content,len);
-    benachrichtige();;
+
+}
+
+int Bildanalysator_Proxy::getObjektPosition()
+{
+
+}
+
+int Bildanalysator_Proxy::getObjektOrientierung()
+{
+
+}
+
+int Bildanalysator_Proxy::getObjektBreite()
+{
+
 }
 
 int Bildanalysator_Proxy::hexStringToByteStream(unsigned char* byte, const char* hex, int len)

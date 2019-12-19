@@ -16,22 +16,24 @@
 #include "../src/dialogzustand.h"
 
 
+
 class Wartend : public Dialogzustand
 {
 public:
-    Wartend(PDialog* dlg);
+    Wartend(Koordinator* dlg);
 
     virtual ~Wartend();
 
-    /**  @brief Informiert PDialog ueber Empfang einer RFID-UID
+    /**  @brief Informiert Koordinator ueber Empfang einer RFID-UID
     *
-    * Eine empfangene RFID-UID wird mit der Methode an den PDialog uebergeben und hier
+    * Eine empfangene RFID-UID wird mit der Methode an den Koordinator uebergeben und hier
     * zur Ermittlung des dazugehoerigen Patienten verwendet. Mit diesem wird dann im weiteren
-    * Verlauf der PDialog gefuehrt. Die Methode aendert den Dialogzustand zu Begruessend.
+    * Verlauf der Koordinator gefuehrt. Die Methode aendert den Dialogzustand zu Begruessend.
     *
     * @param [in] ru empfangene RFID-UID eines Patientenarmbandes
     */
     void rfidEmpfangen(unsigned long ru);
+    void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s);
 protected:
 
 private:
