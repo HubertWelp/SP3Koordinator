@@ -4,8 +4,8 @@
 PDialog::PDialog(int argc, char **argv)
 {
     //ctor
-    m_scrs = new SCRS();
-    m_scrs->anmelden(this);
+    m_bildanalysatorProxy = new Bildanalysator_Proxy();
+    m_bildanalysatorProxy->anmelden(this);
     m_roboter = new Roboter(argc,argv);
     m_roboter->anmelden(this);
     m_timer = new Timer();
@@ -16,25 +16,25 @@ PDialog::PDialog(int argc, char **argv)
 PDialog::~PDialog()
 {
     //dtor
-    delete m_scrs;
+    delete m_bildanalysatorProxy;
     delete m_roboter;
     delete m_timer;
 }
 
 void PDialog::aktualisiere(Subjekt *s)
 {
-    if(dynamic_cast<SCRS*>(s))
-        handleSCRSNachrichten();
+    if(dynamic_cast<Bildanalysator_Proxy*>(s))
+        handleBildanalysatorNachrichten();
     if(dynamic_cast<Roboter*>(s))
         handleRoboterNachrichten();
     if(dynamic_cast<Timer*>(s))
         handleTimerNachrichten();}
 
 
-void PDialog::handleSCRSNachrichten()
+void PDialog::handleBildanalysatorNachrichten()
 {
-    cout << "RFIDUID empfangen: " << m_scrs->getRFIDUID() << endl;
-    rfidEmpfangen( m_scrs->getRFIDUID());
+    cout << "RFIDUID empfangen: " << m_bildanalysatorProxy->getRFIDUID() << endl;
+    rfidEmpfangen( m_bildanalysatorProxy->getRFIDUID());
 }
 
 void PDialog::handleRoboterNachrichten()
