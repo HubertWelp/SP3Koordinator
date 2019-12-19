@@ -2,7 +2,7 @@
 #define PDIALOG_H
 #ifndef Q_MOC_RUN
 #include "Subjekt.h"
-#include "scrs.h"
+#include "Bildanalysator_Proxy.h"
 #include "roboter.h"
 #include "Beobachter.h"
 #include "timer.h"
@@ -35,10 +35,10 @@ protected:
     Dialogzustand* zustand;
 
 private:
-    SCRS* m_scrs;
+    Bildanalysator_Proxy* m_bildanalysatorProxy;
     Roboter* m_roboter;
     Timer* m_timer;
-    void handleSCRSNachrichten();
+    void handleBildanalysatorNachrichten();
     void handleRoboterNachrichten();
     void handleTimerNachrichten();
 

@@ -1,27 +1,27 @@
-#include "scrs.h"
+#include "Bildanalysator_Proxy.h"
 #include <stdlib.h>
 #include <iostream>
 #include <string.h>
 using namespace std;
 
-SCRS::SCRS()
+Bildanalysator_Proxy::Bildanalysator_Proxy()
 {
     subscribe("RFID1/Tagdaten");
 
 }
 
-unsigned long long SCRS::getRFIDUID()
+unsigned long long Bildanalysator_Proxy::getRFIDUID()
 {
     return receivedTag.getRFIDNr();;
 }
 
-void SCRS::onMessageReceived(char *t, char *m)
+void Bildanalysator_Proxy::onMessageReceived(char *t, char *m)
 {
     hexStringToByteStream((unsigned char*)&receivedTag,(m+2),240);
     benachrichtige();
 }
 
-void SCRS::byteStreamToHexString(char* hex, const unsigned char* byte, int len)
+void Bildanalysator_Proxy::byteStreamToHexString(char* hex, const unsigned char* byte, int len)
 {
     int i;
     for (i=0; i<len; i++)
@@ -31,7 +31,7 @@ void SCRS::byteStreamToHexString(char* hex, const unsigned char* byte, int len)
     hex[i*2] = 0;
 }
 
-void SCRS::setTagContent(const unsigned char *content, int len)
+void Bildanalysator_Proxy::setTagContent(const unsigned char *content, int len)
 {
     if(len>sizeof (RFIDTag))
         memcpy(&receivedTag,content,sizeof (RFIDTag));
@@ -40,7 +40,7 @@ void SCRS::setTagContent(const unsigned char *content, int len)
     benachrichtige();;
 }
 
-int SCRS::hexStringToByteStream(unsigned char* byte, const char* hex, int len)
+int Bildanalysator_Proxy::hexStringToByteStream(unsigned char* byte, const char* hex, int len)
 {
     int n=0,ret=1;
     const char* pos = hex;

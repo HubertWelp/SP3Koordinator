@@ -1,5 +1,5 @@
-#ifndef SCRS_H
-#define SCRS_H
+#ifndef Bildanalysator_Proxy_H
+#define Bildanalysator_Proxy_H
 /** @class SCRS
  * @brief Abstraktion eines Smart Connected RFID Sensors.
  *
@@ -21,10 +21,10 @@
 #include "rfidtag.h"
 
 
-class SCRS : public Subjekt, public MQTTNode
+class Bildanalysator_Proxy : public Subjekt, public MQTTNode
 {
 public:
-    SCRS ();/* verhindert, dass ein Objekt von außerhalb von N erzeugt wird. */
+    Bildanalysator_Proxy ();/* verhindert, dass ein Objekt von außerhalb von N erzeugt wird. */
                   // protected, wenn man von der Klasse noch erben möchte
 
     unsigned long long getRFIDUID();
