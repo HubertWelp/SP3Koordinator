@@ -10,6 +10,8 @@
 #include <QtCore/QObject>
 class Dialogzustand;
 
+////Diese Klasse managed den ablauf des Programms
+
 class Koordinator : public QObject, public Subjekt, public Beobachter
 {
 Q_OBJECT
