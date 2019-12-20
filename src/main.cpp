@@ -22,6 +22,7 @@
 #include "wartend.h"
 #include <mysql/mysql.h>
 #include <stdio.h>
+#include "Bildanalysator_Proxy.h"
 using namespace std;
 
 void finish_with_error(MYSQL *con)
@@ -41,11 +42,11 @@ int main(int argc, char **argv) {
     **********************/
     QApplication app(argc, argv);
     Koordinator pD;
-    pds::MainWindow w(&pD);
+    //pds::MainWindow w(&pD);
     pD.setZustand(new Wartend(&pD));
-    w.show();
+    //w.show();
     pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
-    app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));
+    //app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));
     int result = app.exec();
 
     return result;

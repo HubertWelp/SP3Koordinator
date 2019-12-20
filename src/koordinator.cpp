@@ -110,3 +110,8 @@ Timer* Koordinator::getTimer()
     return m_timer;
 }
 
+
+void Koordinator::objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s)
+{
+    zustand->objektAuswaehlen(s);
+}
