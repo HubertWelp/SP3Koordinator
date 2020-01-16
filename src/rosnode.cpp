@@ -1,6 +1,6 @@
 #include "rosnode.h"
 #include <iostream>
-
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 ROSNode::ROSNode(int argc, char **argv,  const string nodeName)
     : m_pStringTopic(PS_TOPIC)
@@ -51,14 +51,26 @@ void ROSNode::publish(const string msg)
     m_stringPublisher.publish(rosMsg);
 }
 
-void ROSNode::publish(const double x, const double y, const double z, const double w)
+void ROSNode::publish(const double x, const double y, const double z, const double phi) // Fuer Drehung muss w = 1 und phi ein radiant
 {
     geometry_msgs::PoseStamped rosMsg;
     rosMsg.header.frame_id = "map";
     rosMsg.pose.position.x = x;
     rosMsg.pose.position.y = y;
     rosMsg.pose.position.z = z;
-    rosMsg.pose.orientation.w = w;
+
+    /** Die drehung wird durch radianten angegeben zbsp.: 180° = pi **/
+    /*** hier Wird die Quanternion Darstellung für eine Drehumg um die z Achse berechnet *******/
+    tf2::Quaternion qtemp;
+    geometry_msgs::Quaternion qmsgtemp;
+    qtemp.setRPY(0,0,phi);
+    qmsgtemp = tf2::toMsg(qtemp);
+    /******************************************************************************************/
+
+    rosMsg.pose.orientation.x = qmsgtemp.x;//Drehung um x Achse
+    rosMsg.pose.orientation.y = qmsgtemp.y;//Drehung um y Achse
+    rosMsg.pose.orientation.z = qmsgtemp.z;//Drehung um z Achse
+    rosMsg.pose.orientation.w = qmsgtemp.w;//Drehung um w Achse
     m_posePublisher.publish(rosMsg);
 }
 

@@ -10,7 +10,15 @@ public:
     Roboter(int argc, char **argv);
     void setStatus(string status);
     string getStatus();
-    void setZiel(double x, double y);
+    /**
+     * @brief setZiel
+     * @param x    Koordinate im Raum
+     * @param y    Koordinate im Raum
+     * @param phi  Drehung um die z Achse in Radien
+     *
+     * Sendet Position und Orientierung an den RosNode
+     */
+    void setZiel(double x, double y, double phi);
 private:
 //    void msgReceivedCallback(const std_msgs::String::ConstPtr& msg);
     void msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg);

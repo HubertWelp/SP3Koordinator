@@ -6,6 +6,7 @@
 #include <std_msgs/String.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <move_base_msgs/MoveBaseActionResult.h>
+
 using namespace std;
 
 //#define ROS_MASTER_URI     "http://192.168.1.105:11311"
@@ -25,7 +26,18 @@ public:
     void changeStringPublisherTopic(const string& topic);
     void changePosePublisherTopic(const string& topic);
     void publish(const string msg);
-    void publish(const double x, const double y, const double z=0.0, const double w=1.0);
+    /**
+     * @brief publish
+     * @param x
+     * @param y
+     * @param z
+     * @param w
+     * @param phi
+     * Diese Funktion sendet sowohl Positionsdaten(x,y,z) als auch die Orientierung im Raum.
+     * Dabei ist die Orientierung auf die Drehung um die z-Achse beschränkt.
+     * Um diese Drehung zu senden muss w = 1
+     */
+    void publish(const double x, const double y, const double z=0.0, const double phi=0.0);
 //    virtual void msgReceivedCallback(const std_msgs::String::ConstPtr& msg);
     virtual void msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg);
 

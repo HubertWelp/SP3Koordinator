@@ -23,6 +23,8 @@
 #include <mysql/mysql.h>
 #include <stdio.h>
 #include "Bildanalysator_Proxy.h"
+
+
 using namespace std;
 
 void finish_with_error(MYSQL *con)
@@ -41,6 +43,7 @@ int main(int argc, char **argv) {
     ** Qt
     **********************/
     QApplication app(argc, argv);
+
     Koordinator pD;
     //pds::MainWindow w(&pD);
     pD.setZustand(new Wartend(&pD));

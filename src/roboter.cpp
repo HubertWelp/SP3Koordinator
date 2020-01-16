@@ -20,9 +20,10 @@ string Roboter::getStatus()
     return m_status;
 }
 
-void Roboter::setZiel(double x, double y)
+void Roboter::setZiel(double x, double y,double phi)
 {
     // hier Message an echten Roboter ueber ROSNode senden
+    ROSNode::publish(x,y,0,phi);
 
 }
 
