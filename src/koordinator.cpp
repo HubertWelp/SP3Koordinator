@@ -35,6 +35,7 @@ void Koordinator::handleBildanalysatorNachrichten()
 {
 //    cout << "RFIDUID empfangen: " << m_bildanalysatorProxy->getRFIDUID() << endl;
 //    rfidEmpfangen( m_bildanalysatorProxy->getRFIDUID());
+
 }
 
 void Koordinator::handleRoboterNachrichten()

@@ -16,6 +16,7 @@ void Bildanalysator_Proxy::messageReceived(string msg)
 {
     std::cout << "Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
     // Nachricht analysieren
+    std::sscanf(msg.c_str(),"%f %f %f %f %f",x,y,z,phi,breite);
     benachrichtige();
 
 }
@@ -32,22 +33,24 @@ void Bildanalysator_Proxy::byteStreamToHexString(char* hex, const unsigned char*
 
 int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
 {
-
+    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit));
 }
 
-int Bildanalysator_Proxy::getObjektPosition()
+void Bildanalysator_Proxy::getObjektPosition(int* px, int* py, int* pz)
 {
-
+    (*px)=x;
+    (*py)=y;
+    (*pz)=z;
 }
 
-int Bildanalysator_Proxy::getObjektOrientierung()
+float Bildanalysator_Proxy::getObjektOrientierung()
 {
-
+    return phi;
 }
 
 int Bildanalysator_Proxy::getObjektBreite()
 {
-
+    return breite;
 }
 
 int Bildanalysator_Proxy::hexStringToByteStream(unsigned char* byte, const char* hex, int len)

@@ -33,8 +33,8 @@ public:
 
 
     int bildanalyseStarten(ObjektTyp suessigkeit);
-    int getObjektPosition();
-    int getObjektOrientierung();
+    void getObjektPosition(int* px, int* py, int* pz);
+    float getObjektOrientierung();
     int getObjektBreite();
 
 private:
@@ -46,7 +46,10 @@ private:
     * @param [in] len Laenge des Buffers in Byte
     */
 //    void setTagContent(const unsigned char* content, int len);
-
+    bool error = false;
+    float phi;
+    int x, y, z;
+    int breite;
 
 
 

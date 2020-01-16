@@ -23,6 +23,7 @@ string Roboter::getStatus()
 void Roboter::setZiel(double x, double y)
 {
     // hier Message an echten Roboter ueber ROSNode senden
+
 }
 
 //void Roboter::msgReceivedCallback(const std_msgs::String::ConstPtr &msg)
