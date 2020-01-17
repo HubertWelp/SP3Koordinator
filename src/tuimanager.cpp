@@ -29,8 +29,6 @@ void TUIManager::aktualisiere(Subjekt* s)
         handleWartend(dynamic_cast<Wartend*>(dz));
     else if(dynamic_cast<Begruessend*>(dz))
         handleBegruessend(dynamic_cast<Begruessend*>(dz));
-    else if(dynamic_cast<Fahrend*>(dz))
-        handleFahrend(dynamic_cast<Fahrend*>(dz));
     else if(dynamic_cast<Fehler*>(dz))
         handleFehler(dynamic_cast<Fehler*>(dz));
     else if(dynamic_cast<Verabschiedend*>(dz))
@@ -142,26 +140,7 @@ int TUIManager::kbhit()
 
     return 0;
 }
-void TUIManager::handleFahrend(Fahrend* dz)
-{
-    system("clear");
-    cout << "Fahrenbildschirm\n\n";
-    cout << "                         ^\n";
-    cout << "                        / \\\n";
-    cout << "                       /   \\\n";
-    cout << "                      /     \\\n";
-    cout << "                     /       \\\n";
-    cout << "                    /         \\\n";
-    cout << "                   /           \\\n";
-    cout << "                  /             \\\n";
-    cout << "                 /               \\\n";
-    cout << "                /                 \\\n";
-    cout << "               /                   \\\n";
-    cout << "              /                     \\\n";
-    cout << "             /                       \\\n";
-//    cout << "             |                       |\n";
-    cout << "             | Bitte folgen Sie mir! |\n";
-}
+
 
 void TUIManager::handleFehler(Fehler *dz)
 {

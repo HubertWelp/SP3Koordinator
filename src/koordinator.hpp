@@ -16,24 +16,25 @@ class Koordinator : public QObject, public Subjekt, public Beobachter
 {
 Q_OBJECT
 public:
-    Koordinator(int argc=1, char **argv=(char *[]){"pds"});
+    Koordinator(int argc=1, char **argv=(char *[]){"sp3"});
     virtual ~Koordinator();
     void rfidEmpfangen(unsigned long ru);
     void auswahlAbbrechen();
     void raumWaehlen(unsigned short rNr);
     void angekommen();
-
     void fahrenAbgebrochen(string grund="");
 
-    void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s);
-    void objektGefunden();
-    void objektNichtGefunden();
-    void objektUebergeben();
     void setZustand(Dialogzustand* z);
+
+    void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s);
+    void objektErkannt();
+    void objektNichtErkannt();
+    void objektUebergeben();
     void onTimer();
 
     Dialogzustand* getDialogzustand();
     Roboter* getRoboter();
+    Bildanalysator_Proxy* getBildAnalysator();
     Timer* getTimer();
 
 

@@ -37,6 +37,7 @@ public:
     float getObjektOrientierung();
     int getObjektBreite();
 
+
 private:
     /** @brief setTagConent
     *

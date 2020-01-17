@@ -43,12 +43,15 @@ int main(int argc, char **argv) {
     ** Qt
     **********************/
     QApplication app(argc, argv);
+    int a=1;
+
 
     Koordinator pD;
     //pds::MainWindow w(&pD);
     pD.setZustand(new Wartend(&pD));
     //w.show();
     pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
+
     //app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));
     int result = app.exec();
 

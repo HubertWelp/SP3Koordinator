@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "begruessend.h"
 #include "wartend.h"
-#include "fahrend.h"
 #include "kis.h"
 #include "gis.h"
 #include <list>
@@ -44,7 +43,6 @@ void Begruessend::raumWaehlen(unsigned short rNr)
         Koordinaten rk = m_raumListe[rNr].getKoordinaten();
         roboter->publish(rk.x,rk.y);
     }
-    dialog->setZustand(new Fahrend(dialog));
     delete this;
 }
 

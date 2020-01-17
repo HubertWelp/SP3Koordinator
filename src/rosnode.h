@@ -11,11 +11,11 @@ using namespace std;
 
 //#define ROS_MASTER_URI     "http://192.168.1.105:11311"
 #define ROS_MASTER_URI     "http://localhost:11311"
-#define NODENAME    "pds"
-#define PP_TOPIC     "move_base_simple/goal"
+#define NODENAME    "sp3"
+#define PP_TOPIC     "robot/pose"
 #define PS_TOPIC     "robot/status"
 #define S_TOPIC     "robot/status"
-#define S_TOPIC     "move_base/result"
+#define S_TOPIC     "rueckmeldung"
 
 class ROSNode
 {

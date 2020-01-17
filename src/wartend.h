@@ -32,7 +32,7 @@ public:
     *
     * @param [in] ru empfangene RFID-UID eines Patientenarmbandes
     */
-    void rfidEmpfangen(unsigned long ru);
+    //void rfidEmpfangen(unsigned long ru);
     void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s);
 protected:
 

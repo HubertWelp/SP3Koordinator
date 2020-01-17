@@ -5,7 +5,6 @@
 #include "dialogzustand.h"
 #include "begruessend.h"
 #include "wartend.h"
-#include "fahrend.h"
 #include "fehler.h"
 #include "verabschiedend.h"
 
@@ -20,7 +19,6 @@ class TUIManager : public Beobachter
     private:
         void handleWartend(Wartend* dz);
         void handleBegruessend(Begruessend* dz);
-        void handleFahrend(Fahrend* dz);
         void handleFehler(Fehler* dz);
         void handleVerabschiedend(Verabschiedend* dz);
         int kbhit();

@@ -15,7 +15,6 @@
 #include "koordinator.hpp"
 #include "dialogzustand.h"
 #include "fehler.h"
-#include "fahrend.h"
 #include "wartend.h"
 #include "begruessend.h"
 #include "verabschiedend.h"
@@ -85,7 +84,6 @@ private:
 
     void handleWartend(Wartend* dz);
     void handleBegruessend(Begruessend* dz);
-    void handleFahrend(Fahrend* dz);
     void handleFehler(Fehler* dz);
     void handleVerabschiedend(Verabschiedend* dz);
 };

@@ -1,6 +1,6 @@
 #include "wartend.h"
 #include <stdio.h>
-#include "begruessend.h"
+#include "suchend.h"
 
 Wartend::Wartend(Koordinator* dlg)
     : Dialogzustand(dlg)
@@ -14,16 +14,17 @@ Wartend::~Wartend()
 {
     //dtor
 }
-void Wartend::rfidEmpfangen(unsigned long ru)
+/*void Wartend::rfidEmpfangen(unsigned long ru)
 {
     dialog->setZustand(new Begruessend(ru,dialog));
 
     delete this;
-}
+}*/
 
 void Wartend::objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s)
 {
     //...
-//    dialog->setZustand(new Begruessend(ru,dialog));
-//    delete this;
+    dialog->setZustand(new Suchend(s,dialog));//s fehlt
+    delete this;
+
 }

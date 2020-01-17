@@ -24,13 +24,13 @@ public:
     virtual void auswahlAbbrechen() {};
     virtual void raumWaehlen(unsigned short rNr) {};
     virtual void angekommen() {};
-    virtual void onTimer() {};
     virtual void fahrenAbgebrochen(string grund=""){};
 
     virtual void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s){};
-    virtual void objektGefunden(){};
-    virtual void objektNichtGefunden(){};
+    virtual void objektErkannt(){};
+    virtual void objektNichtErkannt(){};
     virtual void objektUebergeben(){};
+    virtual void onTimer() {};
 
     void setZustand(Dialogzustand* z);
 protected:

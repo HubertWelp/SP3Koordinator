@@ -23,18 +23,28 @@ Koordinator::~Koordinator()
 
 void Koordinator::aktualisiere(Subjekt *s)
 {
+
+
     if(dynamic_cast<Bildanalysator_Proxy*>(s))
-        handleBildanalysatorNachrichten();
+    {handleBildanalysatorNachrichten();
+        printf("\n bildanalysator erkannt---\n");
+    }
     if(dynamic_cast<Roboter*>(s))
         handleRoboterNachrichten();
     if(dynamic_cast<Timer*>(s))
-        handleTimerNachrichten();}
+        handleTimerNachrichten();
+}
 
 
 void Koordinator::handleBildanalysatorNachrichten()
 {
 //    cout << "RFIDUID empfangen: " << m_bildanalysatorProxy->getRFIDUID() << endl;
 //    rfidEmpfangen( m_bildanalysatorProxy->getRFIDUID());
+    printf("\nhandleBilananalysatorn");
+
+    //ueberpruefen welche Nachricht
+
+    objektErkannt();
 
 }
 
@@ -111,8 +121,31 @@ Timer* Koordinator::getTimer()
     return m_timer;
 }
 
+Bildanalysator_Proxy* Koordinator::getBildAnalysator()
+{
+    return m_bildanalysatorProxy;
+}
+
 
 void Koordinator::objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s)
 {
     zustand->objektAuswaehlen(s);
 }
+
+void Koordinator::objektErkannt()
+{
+    zustand->objektErkannt();
+}
+
+void Koordinator::objektUebergeben()
+{
+    zustand->objektUebergeben();
+}
+
+void Koordinator::objektNichtErkannt()
+{
+    zustand->objektNichtErkannt();
+}
+
+
+

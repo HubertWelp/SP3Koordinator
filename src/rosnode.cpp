@@ -69,7 +69,7 @@ void ROSNode::publish(const double x, const double y, const double z, const doub
 
     rosMsg.pose.orientation.x = qmsgtemp.x;//Drehung um x Achse
     rosMsg.pose.orientation.y = qmsgtemp.y;//Drehung um y Achse
-    rosMsg.pose.orientation.z = qmsgtemp.z;//Drehung um z Achse
+    rosMsg.pose.orientation.z = qmsgtemp.z;//Drehung um z Achse*/
     rosMsg.pose.orientation.w = qmsgtemp.w;//Drehung um w Achse
     m_posePublisher.publish(rosMsg);
 }

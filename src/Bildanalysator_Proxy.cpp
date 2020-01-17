@@ -14,9 +14,10 @@ Bildanalysator_Proxy::Bildanalysator_Proxy()
 
 void Bildanalysator_Proxy::messageReceived(string msg)
 {
-    std::cout << "Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
+
     // Nachricht analysieren
-    std::sscanf(msg.c_str(),"%f %f %f %f %f",x,y,z,phi,breite);
+    std::sscanf(msg.c_str(),"%i %i %i %f %i",&x,&y,&z,&phi,&breite);
+     std::cout << "--Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
     benachrichtige();
 
 }

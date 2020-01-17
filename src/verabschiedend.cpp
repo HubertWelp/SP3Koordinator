@@ -9,7 +9,8 @@ Verabschiedend::Verabschiedend(Koordinator* dlg)
     //ctor
     printf("V E R A B S C H I E D U N G\n");
     Timer* t = dialog->getTimer();
-    t->setStopZeit(10);
+    t->stop();
+    t->setStopZeit(5);
     t->start();
 
 }

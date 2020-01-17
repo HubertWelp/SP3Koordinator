@@ -187,8 +187,6 @@ void MainWindow::aktualisiere()
         handleWartend(dynamic_cast<Wartend*>(dz));
     else if(dynamic_cast<Begruessend*>(dz))
         handleBegruessend(dynamic_cast<Begruessend*>(dz));
-    else if(dynamic_cast<Fahrend*>(dz))
-        handleFahrend(dynamic_cast<Fahrend*>(dz));
     else if(dynamic_cast<Fehler*>(dz))
         handleFehler(dynamic_cast<Fehler*>(dz));
     else if(dynamic_cast<Verabschiedend*>(dz))
@@ -311,25 +309,7 @@ void MainWindow::handleBegruessend(Begruessend *dz)
 
 }
 
-void MainWindow::handleFahrend(Fahrend *dz)
-{
-    nameLabel->setText(begruessungsText);
-    hinweisLabel->setText("\nFolgen Sie dem Roboter.");
-    for(int i=0;i<8;i++)
-    {
-        zielButton[i]->hide();
-    }
 
-    abbrechenButton->hide();
-    zustandLabel->show();
-    if(!wartendSymbol)
-         std::cout << "Bild konnte nicht geladen werden\n";
-     else
-     {
-         zustandLabel->setPixmap(*fahrendSymbol);
-     }
-
-}
 
 void MainWindow::handleFehler(Fehler *dz)
 {

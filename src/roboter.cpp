@@ -5,7 +5,7 @@ using namespace std;
 Roboter::Roboter(int argc, char **argv)
     :ROSNode(argc,argv)
 {
-
+    rtst = new ROSNode(argc,argv);
 }
 
 void Roboter::setStatus(string status)
@@ -20,10 +20,11 @@ string Roboter::getStatus()
     return m_status;
 }
 
-void Roboter::setZiel(double x, double y,double phi)
+void Roboter::greife(double x, double y,double z,double phi,double breite)
 {
     // hier Message an echten Roboter ueber ROSNode senden
-    ROSNode::publish(x,y,0,phi);
+    printf("\n greife Objekt  %.1f %.1f %.1f %.1f %.1f \n",x,y,z,phi,breite);
+    rtst->publish(x,y,z,phi);
 
 }
 
