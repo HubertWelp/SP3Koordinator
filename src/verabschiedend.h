@@ -17,7 +17,7 @@
 class Verabschiedend : public Dialogzustand
 {
 public:
-    Verabschiedend(Koordinator* dlg);
+    Verabschiedend(Koordinator* dlg, int event);
     virtual ~Verabschiedend();
     /** @brief Beendigung des Verabschiedungsbildschirms
     *
@@ -26,9 +26,19 @@ public:
     * gestartet wird (also beim Eintritt in den Zustand Verarbschiedend). Die Methode wechselt den Dialogzustand zu Wartend.
     */
     void onTimer();
+
+
 protected:
 
 private:
+    /**
+     * der parameter [anzeige_status] gibt an welches Ereigniss zu diesem Zustand geführt hat
+     * Diese Information wird von der GUI genutzt
+     * [ereignis_status] = 0 | Ereignis: ObjektNichtErkannt
+     * [ereignis_status] = 1 | Ereignis: onTimer  <30s>
+     * [ereignis_status] = 2 | Ereignis: objektUebergeben
+     */
+    int ereignis_status;
 };
 
 #endif // VERABSCHIEDEND_H

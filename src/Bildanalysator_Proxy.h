@@ -31,7 +31,7 @@ public:
     static int hexStringToByteStream(unsigned char* byte, const char* hex, int len);
     static void byteStreamToHexString(char* hex, const unsigned char* byte, int len);
 
-
+    void bildInfoAuswerten(std::string ms);
     int bildanalyseStarten(ObjektTyp suessigkeit);
     void getObjektPosition(int* px, int* py, int* pz);
     float getObjektOrientierung();

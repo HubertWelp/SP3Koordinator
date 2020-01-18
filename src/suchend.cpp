@@ -28,7 +28,7 @@ void Suchend::objektErkannt()
 
 void Suchend::objektNichtErkannt()
 {
-    dialog->setZustand(new Verabschiedend(dialog));
+    dialog->setZustand(new Verabschiedend(dialog,0));
     delete this;
 }
 

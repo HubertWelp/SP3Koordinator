@@ -21,7 +21,7 @@ public:
     void greife(double x, double y, double z, double phi,double breite);
 private:
 //    void msgReceivedCallback(const std_msgs::String::ConstPtr& msg);
-    void msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg);
+    void msgReceivedCallback(const std_msgs::String::ConstPtr &msg);
     string m_status;
     ROSNode *rtst;
 

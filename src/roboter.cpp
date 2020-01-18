@@ -33,13 +33,13 @@ void Roboter::greife(double x, double y,double z,double phi,double breite)
 //    string status = string(msg->data.c_str());
 //    setStatus(status);
 //}
-void Roboter::msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg)
+void Roboter::msgReceivedCallback(const std_msgs::String::ConstPtr &msg)
 {
-    printf("ich hoerte: %i\n",msg->status.status);
+    printf("ich hoerte: %s\n",msg->data.c_str());
 
     string status;
 
-    status = to_string(msg->status.status);
+    status = msg->data.c_str();
     cout << "als string " << status << endl;
     setStatus(status);
 }

@@ -30,7 +30,9 @@ void Koordinator::aktualisiere(Subjekt *s)
         printf("\n bildanalysator erkannt---\n");
     }
     if(dynamic_cast<Roboter*>(s))
-        handleRoboterNachrichten();
+    {handleRoboterNachrichten();
+        printf("\n Rueckmeldung vom Roboter\n");
+    }
     if(dynamic_cast<Timer*>(s))
         handleTimerNachrichten();
 }
@@ -51,14 +53,8 @@ void Koordinator::handleBildanalysatorNachrichten()
 void Koordinator::handleRoboterNachrichten()
 {
     string nachricht =  m_roboter->getStatus();
-//    cout << "Roboterstatus empfangen: " <<  nachricht  << endl;
-    if(nachricht=="3")
-    {
-        angekommen();
-    }else
-    {
-        fahrenAbgebrochen();
-    }
+    cout << "Roboterstatus empfangen: " <<  nachricht  << endl;
+    objektUebergeben();
 
 //    {
 ////        onTimer();

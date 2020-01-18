@@ -39,7 +39,7 @@ public:
      */
     void publish(const double x, const double y, const double z=0.0, const double phi=0.0);
 //    virtual void msgReceivedCallback(const std_msgs::String::ConstPtr& msg);
-    virtual void msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg);
+    virtual void msgReceivedCallback(const std_msgs::String::ConstPtr &msg);
 
 private:
     ros::Publisher m_stringPublisher;

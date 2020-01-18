@@ -79,11 +79,11 @@ void ROSNode::publish(const double x, const double y, const double z, const doub
 //{
 ////    ROS_INFO("Ich hoerte: [%s]", msg->data.c_str());
 //}
-void ROSNode::msgReceivedCallback(const move_base_msgs::MoveBaseActionResult::ConstPtr &msg)
+void ROSNode::msgReceivedCallback(const std_msgs::String::ConstPtr &msg)
 {
 //    ROS_INFO("Ich hoerte: [%s]", msg->data.c_str());
-    ROS_INFO("Ich hoerte: [%i]", msg->status.status);
-    printf("ich hoerte: %i\n",msg->status.status);
+    ROS_INFO("Ich hoerte: [%s]", msg->data.c_str());
+    printf("ich hoerte: %s\n",msg->data.c_str());
 
 }
 
