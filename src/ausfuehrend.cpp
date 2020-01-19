@@ -6,6 +6,7 @@
 
 Ausfuehrend::Ausfuehrend( Koordinator* dlg)
     : Dialogzustand(dlg)
+    , m_objektUebergebenEreignis(false)
 {
 
     //ctor
@@ -39,6 +40,7 @@ Ausfuehrend::~Ausfuehrend()
 
 void Ausfuehrend::objektUebergeben()
 {
+    m_objektUebergebenEreignis=true;
     dialog->setZustand(new Verabschiedend(dialog,2));
     delete this;
 }
@@ -47,6 +49,19 @@ void Ausfuehrend::onTimer()
 {
     dialog->setZustand(new Verabschiedend(dialog,1));
     delete this;
+}
+
+void Ausfuehrend::warte()
+{
+    int t=0; // verstrichene Zeit in Sekunden
+    while(t<30 && !m_objektUebergebenEreignis)
+    {
+        printf("Ausfuehrung: tick %i %i\n",t,m_objektUebergebenEreignis);
+        sleep(1);
+        t++;
+    }
+    if(!m_objektUebergebenEreignis)
+        onTimer();
 }
 
 

@@ -51,7 +51,9 @@ int main(int argc, char **argv) {
     pD.setZustand(new Wartend(&pD));
     //w.show();
     pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
-    pD.objektNichtErkannt();
+//    pD.objektNichtErkannt();
+//    std::cin >> a;
+//    pD.onTimer();
     //app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));
     int result = app.exec();
 
