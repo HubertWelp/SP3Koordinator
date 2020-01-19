@@ -24,7 +24,7 @@ void Suchend::objektErkannt()
 {
     dialog->setZustand(new Ausfuehrend(dialog));
     delete this;
-    dynamic_cast<Ausfuehrend*>(dialog->getDialogzustand())->warte();
+    dialog->getDialogzustand()->warte(30);
 }
 
 void Suchend::objektNichtErkannt()

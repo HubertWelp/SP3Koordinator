@@ -10,7 +10,7 @@
  */
 
 #include "../src/dialogzustand.h"
-
+#define WARTEZEIT_
 
 class Ausfuehrend : public Dialogzustand
 {
@@ -23,11 +23,9 @@ public:
 
     void objektUebergeben();
     void onTimer();
-    void warte();
+
 protected:
 
-private:
-    bool m_objektUebergebenEreignis;
 };
 
 #endif //ausfuehrend_H

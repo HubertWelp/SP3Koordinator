@@ -22,8 +22,8 @@ public:
     /** @brief Beendigung des Verabschiedungsbildschirms
     *
     * Mit der Methode wird dem Koordinator mitgeteilt, dass der Verabschiedungsbildschirm beendet werden sollte.
-    * Die Methode sollte durch einen Timer aufgerufen werden, der beim Eintreffen des Roboters am Ziel
-    * gestartet wird (also beim Eintritt in den Zustand Verarbschiedend). Die Methode wechselt den Dialogzustand zu Wartend.
+    * Die Methode kann durch einen Timer aufgerufen werden, der bei Eintritt in den Zustand Verabschiedend gestartet wird.
+    * Die Methode wechselt den Dialogzustand zu Wartend.
     */
     void onTimer();
 

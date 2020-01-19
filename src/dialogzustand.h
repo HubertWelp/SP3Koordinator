@@ -20,21 +20,37 @@ public:
     Dialogzustand(Koordinator* dlg);
     virtual ~Dialogzustand();
 
-    virtual void rfidEmpfangen(unsigned long ru) {};
+    virtual void rfidEmpfangen(unsigned long ru) {}
     virtual void auswahlAbbrechen() {};
-    virtual void raumWaehlen(unsigned short rNr) {};
+    virtual void raumWaehlen(unsigned short rNr) {}
     virtual void angekommen() {};
-    virtual void fahrenAbgebrochen(string grund=""){};
+    virtual void fahrenAbgebrochen(string grund=""){}
 
-    virtual void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s){};
-    virtual void objektErkannt(){};
-    virtual void objektNichtErkannt(){};
-    virtual void objektUebergeben(){};
-    virtual void onTimer() {};
+    virtual void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s){}
+    virtual void objektErkannt(){}
+    virtual void objektNichtErkannt(){}
+    virtual void objektUebergeben(){}
+    virtual void onTimer() {}
 
     void setZustand(Dialogzustand* z);
+
+    /** @brief Setzt den Zustand in den Wartemodus
+    *
+    * Mit der Methode kann der aktuelle Zustand für sek Sekunden in den Ruhezustand versetzt. Nach der Wartezeit wird das
+    * Ereignis onTimer ausgeloest. Die Warten kann mit der Methode stopWarten unterbrochen werden. In diesem Fall wird kein
+    * onTimer-Ereignis ausgeloest. Die Unterbrechung der Wartezeit koennte z.B. durch ein anderes Ereignis notwendig sein.
+    *
+    * @param sek [in] Wartezeit in Sekunden
+    */
+    void warte(int sek);
+    /** @brief Wartemodus abbrechen
+    *
+    * Mit der Methode wird der Wartemodus des Zustands beendet.
+    */
+    void stopWarten();
 protected:
     Koordinator* dialog;
+    int m_ereignis;
 private:
 
 
