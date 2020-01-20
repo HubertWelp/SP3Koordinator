@@ -25,6 +25,10 @@ Ausfuehrend::Ausfuehrend( Koordinator* dlg)
      * dlg->getRoboter()->publish("hallo");
     */
     dlg->getRoboter()->greife(x,y,z,phi,breite);
+    Timer* t = dialog->getTimer();
+    t->stop();
+    t->setStopZeit(10);
+    t->start();
 }
 
 Ausfuehrend::~Ausfuehrend()
@@ -34,7 +38,7 @@ Ausfuehrend::~Ausfuehrend()
 
 void Ausfuehrend::objektUebergeben()
 {
-    stopWarten();
+//    stopWarten();
     dialog->setZustand(new Verabschiedend(dialog,2));
     delete this;
     dialog->getDialogzustand()->warte(5);
