@@ -26,7 +26,7 @@ public:
     * Die Methode wechselt den Dialogzustand zu Wartend.
     */
     void onTimer();
-
+    int getAusloeser();
 
 protected:
 

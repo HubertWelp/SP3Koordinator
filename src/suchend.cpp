@@ -33,4 +33,9 @@ void Suchend::objektNichtErkannt()
     delete this;
 }
 
+int Suchend::getSuessigkeit()
+{
+    return m_suessigkeit;
+}
+
 

@@ -22,7 +22,7 @@ public:
     */
     void objektErkannt();
     void objektNichtErkannt();
-
+    int getSuessigkeit();
 protected:
 
 private:

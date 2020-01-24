@@ -23,7 +23,7 @@ string Roboter::getStatus()
 void Roboter::greife(double x, double y,double z,double phi,double breite)
 {
     // hier Message an echten Roboter ueber ROSNode senden
-    printf("\n greife Objekt  %.1f %.1f %.1f %.1f %.1f \n",x,y,z,phi,breite);
+    printf("\n greife Objekt  %.1f %.1f %.1f %f %.1f \n",x,y,z,phi,breite);
     rtst->publish(x,y,z,phi);
 
 }

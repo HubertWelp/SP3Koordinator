@@ -20,6 +20,9 @@
 #endif
 #include "../src/tuimanager.h"
 #include "wartend.h"
+
+#include "verabschiedend.h"
+
 #include <mysql/mysql.h>
 #include <stdio.h>
 #include "Bildanalysator_Proxy.h"
@@ -47,11 +50,13 @@ int main(int argc, char **argv) {
 
 
     Koordinator pD;
-    //pds::MainWindow w(&pD);
-    pD.setZustand(new Wartend(&pD));
-    //w.show();
-    pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
-//    pD.objektNichtErkannt();
+    pds::MainWindow w(&pD);
+    pD.setZustand(new Verabschiedend(&pD,0));
+    w.show();
+    //std::cout <<"\nwert test: "<<Bildanalysator_Proxy::ObjektTyp::Maoam<<"\n";
+    /*pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
+    pD.objektErkannt();
+    pD.objektUebergeben();*/
 //    std::cin >> a;
 //    pD.onTimer();
     //app.connect(&app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()));

@@ -14,10 +14,12 @@
 #ifndef Q_MOC_RUN
 #include "koordinator.hpp"
 #include "dialogzustand.h"
-#include "fehler.h"
-#include "wartend.h"
-#include "begruessend.h"
+
+#include "ausfuehrend.h"
 #include "verabschiedend.h"
+#include "suchend.h"
+#include "wartend.h"
+
 #endif
 #include <QtGui/QDialog>
 //#include "ui_main_window.h"
@@ -49,20 +51,18 @@ public:
 
 
 public Q_SLOTS:
-    void abbrechen();
+    //void abbrechen();
     void aktualisiere();
     void onZiel1Button();
     void onZiel2Button();
     void onZiel3Button();
     void onZiel4Button();
-    void onZiel5Button();
-    void onZiel6Button();
-    void onZiel7Button();
-    void onZiel8Button();
+
 private:
 //	Ui::MainWindowDesign ui;
-    QPushButton* abbrechenButton;
-    QPushButton* zielButton[8];
+    //QPushButton* abbrechenButton;
+    QPushButton* zielButton[8];/** pushbuttons durch Label ersetzen*/
+    QPushButton* sorten[4];
 //    QPushButton* ziel1Button;
 //    QPushButton* ziel2Button;
 //    QPushButton* ziel3Button;
@@ -76,16 +76,16 @@ private:
     QLabel* hinweisLabel;
     QLabel* zustandLabel;
     Koordinator* dialog;
-    QPixmap* wartendSymbol;
-    QPixmap* fehlerSymbol;
-    QPixmap* verabschiedendSymbol;
-    QPixmap* fahrendSymbol;
     QString begruessungsText;
 
+    QIcon buttonIcon[4];
+    QPixmap buttonImages[4];
+
+
     void handleWartend(Wartend* dz);
-    void handleBegruessend(Begruessend* dz);
-    void handleFehler(Fehler* dz);
+    void handleSuchend(Suchend* dz);
     void handleVerabschiedend(Verabschiedend* dz);
+    void handleAusfuehrend(Ausfuehrend* dz);
 };
 
 }  // namespace pds
