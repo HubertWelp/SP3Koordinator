@@ -34,8 +34,8 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     , dialog(dlg)
 {
 //	ui.setupUi(this); // Calling this incidentally connects all ui's triggers to on_...() callbacks in this class.
-    setMinimumWidth(this->size().width());
-    setMinimumHeight(this->size().height());
+    setMinimumWidth(800);
+    setMinimumHeight(600);
     move(10,10);
 //    setStyleSheet("background-color:white;");
 
@@ -50,7 +50,7 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     buttonImages[0]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/snicker.png");
     buttonImages[1]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/mw3.png");
     buttonImages[2]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/maoam.png");
-    buttonImages[3]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/schokoriegel.jpg");
+    buttonImages[3]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/snicker.png");
     buttonIcon[0]=QIcon(buttonImages[0]);
     buttonIcon[1]=QIcon(buttonImages[1]);
     buttonIcon[2]=QIcon(buttonImages[2]);
@@ -149,7 +149,7 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     zustandLabel = new QLabel(this);
     //zustandLabel->move((width/2),height()-400);
     zustandLabel->setFixedSize(width()-20,390);
-    zustandLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    //zustandLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     zustandLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     zustandLabel->setScaledContents(true);
     //    mainLayout->addStretch();
@@ -171,9 +171,8 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     connect(sorten[3],SIGNAL(clicked()),this,SLOT(onZiel4Button()));
 
 
-    timer = new QTimer(this);
-    timer->setSingleShot(true);
-    connect(timer,SIGNAL(timeout()),this,SLOT(onTimer()));
+
+
 }
 
 MainWindow::~MainWindow() {
@@ -186,7 +185,7 @@ MainWindow::~MainWindow() {
     delete zustandLabel;
     delete hinweisLabel;
     delete logoLabel;
-    delete timer;
+
 
 }
 
@@ -225,11 +224,6 @@ void MainWindow::onZiel3Button()
 void MainWindow::onZiel4Button()
 {
     dialog->objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Schokoriegel);
-}
-
-void MainWindow::onTimer()
-{
-    dialog->onTimer();
 }
 
 
@@ -295,8 +289,6 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
     }
 
     zustandLabel->hide();
-    timer->stop();
-    timer->start(5000);
 
 }
 
@@ -312,7 +304,6 @@ void MainWindow::handleAusfuehrend(Ausfuehrend *dz)
         sorten[i]->hide();
     }
     zustandLabel->hide();
-    timer->start(20000);
 }
 
 /*****************************************************************************

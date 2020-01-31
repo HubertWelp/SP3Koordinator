@@ -45,8 +45,14 @@ void Koordinator::handleBildanalysatorNachrichten()
     printf("\nhandleBilananalysatorn");
 
     //ueberpruefen welche Nachricht
-
-    objektErkannt();
+    if(m_bildanalysatorProxy->getNichtErkannt())
+    {
+        objektNichtErkannt();
+    }
+    else
+    {
+        objektErkannt();
+    }
 
 }
 

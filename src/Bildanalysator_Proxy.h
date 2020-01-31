@@ -36,7 +36,7 @@ public:
     void getObjektPosition(int* px, int* py, int* pz);
     float getObjektOrientierung();
     int getObjektBreite();
-
+    bool getNichtErkannt();
 
 private:
     /** @brief setTagConent

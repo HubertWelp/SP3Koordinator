@@ -34,7 +34,16 @@ void Bildanalysator_Proxy::byteStreamToHexString(char* hex, const unsigned char*
 
 void Bildanalysator_Proxy::bildInfoAuswerten(string ms)
 {
-    std::sscanf(ms.c_str(),"%i %i %i %f %i",&x,&y,&z,&phi,&breite);
+    if(ms=="Fehler")
+    {
+        error=true;
+    }
+    else
+    {
+        std::sscanf(ms.c_str(),"%i %i %i %f %i",&x,&y,&z,&phi,&breite);
+        error=false;
+    }
+
 }
 
 int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
@@ -57,6 +66,11 @@ float Bildanalysator_Proxy::getObjektOrientierung()
 int Bildanalysator_Proxy::getObjektBreite()
 {
     return breite;
+}
+
+bool Bildanalysator_Proxy::getNichtErkannt()
+{
+    return error;
 }
 
 int Bildanalysator_Proxy::hexStringToByteStream(unsigned char* byte, const char* hex, int len)

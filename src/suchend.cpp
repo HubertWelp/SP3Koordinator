@@ -24,6 +24,7 @@ void Suchend::objektErkannt()
 {
     dialog->setZustand(new Ausfuehrend(dialog));
     delete this;
+    //dialog->getDialogzustand()->warte(30);
 //    dialog->getDialogzustand()->warte(10);
 }
 
@@ -31,6 +32,7 @@ void Suchend::objektNichtErkannt()
 {
     dialog->setZustand(new Verabschiedend(dialog,0));
     delete this;
+
 }
 
 int Suchend::getSuessigkeit()

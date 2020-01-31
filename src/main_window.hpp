@@ -26,6 +26,8 @@
 #include <QtGui/QPushButton>
 #include <QtGui/QLabel>
 
+#include <QTimer>
+
 
 
 
@@ -57,6 +59,7 @@ public Q_SLOTS:
     void onZiel2Button();
     void onZiel3Button();
     void onZiel4Button();
+    void onTimer();
 
 private:
 //	Ui::MainWindowDesign ui;
@@ -80,6 +83,8 @@ private:
 
     QIcon buttonIcon[4];
     QPixmap buttonImages[4];
+
+    QTimer* timer;
 
 
     void handleWartend(Wartend* dz);
