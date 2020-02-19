@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "ausfuehrend.h"
 #include "verabschiedend.h"
-#include "fehler.h"
+
 #include "roboter.h"
 
 Ausfuehrend::Ausfuehrend( Koordinator* dlg)

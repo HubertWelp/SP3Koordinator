@@ -51,6 +51,11 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     buttonImages[1]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/mw3.png");
     buttonImages[2]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/maoam.png");
     buttonImages[3]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/schokoriegel.jpg");
+    buttonImages[4]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/entnahme.png");
+    buttonImages[5]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/ausfuehrend.png");
+    buttonImages[6]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/nichtgefunden.png");
+    buttonImages[7]=QPixmap("/home/Student/catkin_ws/src/SP3Koordinator/resources/images/error.png");
+
     buttonIcon[0]=QIcon(buttonImages[0]);
     buttonIcon[1]=QIcon(buttonImages[1]);
     buttonIcon[2]=QIcon(buttonImages[2]);
@@ -152,6 +157,7 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     zustandLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     zustandLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     zustandLabel->setScaledContents(true);
+
     //    mainLayout->addStretch();
     mainLayout->addWidget(hinweisLabel);
     mainLayout->addLayout(buttonLayout);
@@ -262,7 +268,7 @@ void MainWindow::handleSuchend(Suchend *dz)
 
         sorten[i]->hide();
     }
-
+    aktuelleSuessigkeit = dz->getSuessigkeit();
     zustandLabel->setPixmap(buttonImages[dz->getSuessigkeit()]);
     zustandLabel->setAlignment(Qt::AlignCenter);
     zustandLabel->show();
@@ -276,14 +282,17 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
     if(e==0)
     {
         meldung = "Die ausgewählte Süßigkeit\nkonnte nicht gefunden\n werden";
+        zustandLabel->setPixmap(buttonImages[6]);
     }
     else if(e==1)
     {
         meldung = "Dienst nicht verfuegbar";
+        zustandLabel->setPixmap(buttonImages[7]);
     }
     else if(e==2)
     {
-        meldung = "\n\nBitte entnehmen Sie Ihre\nSuessigkeit";
+        meldung = "Entnehmen Sie!";
+        zustandLabel->setPixmap(buttonImages[4]);
     }
     hinweisLabel->setMaximumHeight(300);
     nameLabel->setText("");
@@ -294,7 +303,7 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
         sorten[i]->hide();
     }
 
-    zustandLabel->hide();
+    zustandLabel->show();
     timer->stop();
     timer->start(5000);
 
@@ -303,6 +312,8 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
 void MainWindow::handleAusfuehrend(Ausfuehrend *dz)
 {
     std::cout<<"\nIch rede mit dem Roboter\n";
+    timer->stop();
+    timer->start(30000);
     nameLabel->setText("");
     hinweisLabel->setText("Einen Moment bitte.");
 
@@ -311,8 +322,9 @@ void MainWindow::handleAusfuehrend(Ausfuehrend *dz)
 
         sorten[i]->hide();
     }
-    zustandLabel->hide();
-    timer->start(20000);
+    zustandLabel->setPixmap(buttonImages[aktuelleSuessigkeit]);
+    zustandLabel->setAlignment(Qt::AlignCenter);
+    zustandLabel->show();
 }
 
 /*****************************************************************************

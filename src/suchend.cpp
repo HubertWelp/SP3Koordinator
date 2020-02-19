@@ -1,7 +1,6 @@
 #include "stdio.h"
 #include "suchend.h"
 #include "ausfuehrend.h"
-#include "fehler.h"
 #include "roboter.h"
 #include "verabschiedend.h"
 

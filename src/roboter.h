@@ -3,7 +3,6 @@
 
 #include "../src/Subjekt.h"
 #include "../src/rosnode.h"
-#include "raum.h"
 class Roboter : public Subjekt, public ROSNode
 {
 public:

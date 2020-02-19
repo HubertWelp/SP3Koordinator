@@ -79,30 +79,11 @@ void Koordinator::setZustand(Dialogzustand* z)
     Q_EMIT changed();
 }
 
-void Koordinator::rfidEmpfangen(unsigned long ru)
-{
-    zustand->rfidEmpfangen(ru);
-}
-void Koordinator::auswahlAbbrechen()
-{
-    zustand->auswahlAbbrechen();
-}
-void Koordinator::raumWaehlen(unsigned short rNr)
-{
-    zustand->raumWaehlen(rNr);
-}
-void Koordinator::angekommen()
-{
-    zustand->angekommen();
-}
+
 void Koordinator::onTimer()
 {
     zustand->onTimer();
 
-}
-void Koordinator::fahrenAbgebrochen(string grund)
-{
-    zustand->fahrenAbgebrochen(grund);
 }
 
 

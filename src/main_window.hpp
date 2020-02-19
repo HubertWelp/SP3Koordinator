@@ -82,7 +82,7 @@ private:
     QString begruessungsText;
 
     QIcon buttonIcon[4];
-    QPixmap buttonImages[4];
+    QPixmap buttonImages[8];
 
     QTimer* timer;
 
@@ -91,6 +91,8 @@ private:
     void handleSuchend(Suchend* dz);
     void handleVerabschiedend(Verabschiedend* dz);
     void handleAusfuehrend(Ausfuehrend* dz);
+
+    int aktuelleSuessigkeit;
 };
 
 }  // namespace pds

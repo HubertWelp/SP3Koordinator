@@ -20,11 +20,7 @@ public:
     Dialogzustand(Koordinator* dlg);
     virtual ~Dialogzustand();
 
-    virtual void rfidEmpfangen(unsigned long ru) {}
-    virtual void auswahlAbbrechen() {};
-    virtual void raumWaehlen(unsigned short rNr) {}
-    virtual void angekommen() {};
-    virtual void fahrenAbgebrochen(string grund=""){}
+
 
     virtual void objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp s){}
     virtual void objektErkannt(){}

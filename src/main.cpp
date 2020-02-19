@@ -18,24 +18,16 @@
 #ifndef Q_MOC_RUN
 #include "koordinator.hpp"
 #endif
-#include "../src/tuimanager.h"
 #include "wartend.h"
 
 #include "verabschiedend.h"
 
-#include <mysql/mysql.h>
 #include <stdio.h>
 #include "Bildanalysator_Proxy.h"
 
 
 using namespace std;
 
-void finish_with_error(MYSQL *con)
-{
-  fprintf(stderr, "%s\n", mysql_error(con));
-  mysql_close(con);
-  exit(1);
-}
 /*****************************************************************************
 ** Main
 *****************************************************************************/
