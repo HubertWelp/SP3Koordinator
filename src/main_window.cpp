@@ -39,7 +39,7 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     move(10,10);
 //    setStyleSheet("background-color:white;");
 
-    int minButtonHeight = 60;
+
     QPixmap pxm;
     QPalette sample_palette;
     QFont font;
@@ -116,10 +116,9 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
         sorten[i] = new QPushButton(this);
         sorten[i]->show();
         sorten[i]->setIcon(buttonIcon[i]);
-        sorten[i]->setMinimumHeight(200);
-
+        sorten[i]->setMinimumHeight(50);
+        sorten[i]->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
         sorten[i]->setIconSize(QSize(300,200));
-
         //sorten[i]->setMaximumHeight(500);
         /*font = sorten[i]->font();
         font.setPointSize(18);
@@ -153,15 +152,20 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
 
     zustandLabel = new QLabel(this);
     //zustandLabel->move((width/2),height()-400);
-    zustandLabel->setFixedSize(width()-20,390);
-    zustandLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    zustandLabel->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-    zustandLabel->setScaledContents(true);
+    //zustandLabel->setFixedSize(width()-20,height()-200);
+    zustandLabel->setMinimumSize(200,150);
+    zustandLabel->setMaximumSize(800,600);
+    zustandLabel->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
+    zustandLabel->setAlignment(Qt::AlignCenter);
+    zustandLabel->setScaledContents(false);
+    QHBoxLayout* zustandsbilder = new QHBoxLayout;
+    zustandsbilder->addWidget(zustandLabel);
+
 
     //    mainLayout->addStretch();
     mainLayout->addWidget(hinweisLabel);
     mainLayout->addLayout(buttonLayout);
-    mainLayout->addWidget(zustandLabel);
+    mainLayout->addLayout(zustandsbilder);
     mainLayout->addStretch();
 
     setLayout(mainLayout);
@@ -270,7 +274,11 @@ void MainWindow::handleSuchend(Suchend *dz)
     }
     aktuelleSuessigkeit = dz->getSuessigkeit();
     zustandLabel->setPixmap(buttonImages[dz->getSuessigkeit()]);
-    zustandLabel->setAlignment(Qt::AlignCenter);
+    //zustandLabel->setAlignment(Qt::AlignCenter);
+    if(zustandLabel->width()>buttonImages[dz->getSuessigkeit()].width())
+    {
+        zustandLabel->setPixmap(buttonImages[dz->getSuessigkeit()].scaled(zustandLabel->width(),zustandLabel->height(),Qt::KeepAspectRatio));
+    }
     zustandLabel->show();
 }
 
@@ -281,7 +289,7 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
     int e = dz->getAusloeser();
     if(e==0)
     {
-        meldung = "Die ausgewählte Süßigkeit\nkonnte nicht gefunden\n werden";
+        meldung = QString(suessStr[aktuelleSuessigkeit]) +"\nkonnte nicht gefunden\n werden";
         zustandLabel->setPixmap(buttonImages[6]);
     }
     else if(e==1)
@@ -322,8 +330,8 @@ void MainWindow::handleAusfuehrend(Ausfuehrend *dz)
 
         sorten[i]->hide();
     }
-    zustandLabel->setPixmap(buttonImages[aktuelleSuessigkeit]);
-    zustandLabel->setAlignment(Qt::AlignCenter);
+    zustandLabel->setPixmap(buttonImages[5]);
+    //zustandLabel->setAlignment(Qt::AlignCenter);
     zustandLabel->show();
 }
 

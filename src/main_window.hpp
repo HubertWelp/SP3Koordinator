@@ -93,6 +93,8 @@ private:
     void handleAusfuehrend(Ausfuehrend* dz);
 
     int aktuelleSuessigkeit;
+    char suessStr[5][14]={"Snickers","MilkyWay","Maoam","Schokoriegel"};
+    //Snickers,MilkyWay,Maoam,Schokoriegel
 };
 
 }  // namespace pds
