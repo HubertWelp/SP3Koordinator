@@ -155,7 +155,7 @@ MainWindow::MainWindow(Koordinator* dlg, QWidget *parent)
     //zustandLabel->setFixedSize(width()-20,height()-200);
     zustandLabel->setMinimumSize(200,150);
     zustandLabel->setMaximumSize(800,600);
-    zustandLabel->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
+    zustandLabel->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
     zustandLabel->setAlignment(Qt::AlignCenter);
     zustandLabel->setScaledContents(false);
     QHBoxLayout* zustandsbilder = new QHBoxLayout;
@@ -291,6 +291,7 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
     {
         meldung = QString(suessStr[aktuelleSuessigkeit]) +"\nkonnte nicht gefunden\n werden";
         zustandLabel->setPixmap(buttonImages[6]);
+        zustandLabel->setPixmap(buttonImages[6].scaled(zustandLabel->width(),zustandLabel->height(),Qt::KeepAspectRatio));
     }
     else if(e==1)
     {
@@ -310,7 +311,6 @@ void MainWindow::handleVerabschiedend(Verabschiedend *dz)
 
         sorten[i]->hide();
     }
-
     zustandLabel->show();
     timer->stop();
     timer->start(5000);
@@ -331,7 +331,7 @@ void MainWindow::handleAusfuehrend(Ausfuehrend *dz)
         sorten[i]->hide();
     }
     zustandLabel->setPixmap(buttonImages[5]);
-    //zustandLabel->setAlignment(Qt::AlignCenter);
+   //zustandLabel->setAlignment(Qt::AlignCenter);
     zustandLabel->show();
 }
 

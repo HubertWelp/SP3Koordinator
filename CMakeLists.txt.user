@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.7.2, 2020-02-20T02:31:34. -->
+<!-- Written by QtCreator 4.7.2, 2020-02-21T15:09:13. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -73,7 +73,7 @@
      <value type="QString">CMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
      <value type="QString">CMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}</value>
      <value type="QString">CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
-     <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
+     <value type="QString">QT_QMAKE_EXECUTABLE:FILEPATH=/usr/bin/qmake-qt4</value>
      <value type="QString">qt_build_DIR:PATH=/opt/ros/kinetic/share/qt_build/cmake</value>
      <value type="QString">roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake</value>
     </valuelist>

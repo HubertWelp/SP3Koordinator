@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//#define ROS_MASTER_URI     "http://192.168.1.105:11311"
+//#define ROS_MASTER_URI     "http://172.20.10.79:11311"
 #define ROS_MASTER_URI     "http://localhost:11311"
 #define NODENAME    "sp3"
 #define PP_TOPIC    "robot/pose"

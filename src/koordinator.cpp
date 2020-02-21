@@ -59,12 +59,8 @@ void Koordinator::handleBildanalysatorNachrichten()
 void Koordinator::handleRoboterNachrichten()
 {
     string nachricht =  m_roboter->getStatus();
-    cout << "Roboterstatus empfangen: " <<  nachricht  << endl;
+        cout << "Roboterstatus empfangen: " <<  nachricht  << endl;
     objektUebergeben();
-
-//    {
-////        onTimer();
-//    }
 }
 
 void Koordinator::handleTimerNachrichten()

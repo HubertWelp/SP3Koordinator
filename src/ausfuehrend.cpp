@@ -12,7 +12,7 @@ Ausfuehrend::Ausfuehrend( Koordinator* dlg)
     printf("A U S F U E H R E N D\n");
     int x,y,z=0;
     int breite = 0;
-    float phi;
+    float phi=0;
 
     Bildanalysator_Proxy* ba;
     ba=dlg->getBildAnalysator();

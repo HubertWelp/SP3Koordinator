@@ -48,7 +48,7 @@ void Bildanalysator_Proxy::bildInfoAuswerten(string ms)
 
 int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
 {
-    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit));
+    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1));
 }
 
 void Bildanalysator_Proxy::getObjektPosition(int* px, int* py, int* pz)

@@ -43,8 +43,10 @@ public:
     * @param [in] msg The text to be transmitted
     * @param [in] destIpAdress The IP-adress of the receiving server host
     * @param [in] desPortNr The port number of the receiving server program
+    * 172.20.10.55 SP3Bildanalysator IP
+    * 127.0.0.1 Test IP (lokal)
     */
-    void sendmessage(std::string msg,const std::string destIpAdress="127.0.0.1",const unsigned short destPortNr=5842);
+    void sendmessage(std::string msg,const std::string destIpAdress="172.20.10.55",const unsigned short destPortNr=5842);
 //    void setCallback(void (*cb)(std::string msg));
 Q_SIGNALS:
     /** @brief Qt-Signal emitted on message reception
