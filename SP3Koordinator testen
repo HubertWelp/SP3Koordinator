@@ -1,0 +1,40 @@
+***********************
+
+SweetPicker3 (SP3Koordinator)
+
+Start und Betrieb der Entwicklungs- und Testumgebeung fuer den SP3Koordinator
+
+***********************
+
+1) roscore starten:
+
+roscore
+
+
+2) QtCreator muss aus Terminal gestartet werden:
+
+/opt/Qt/Tools/QtCreator/bin/qtcreator
+
+3) ROS-Nachricht versenden:
+
+rostopic pub --once /rueckmeldung std_msgs/String "geschafft"
+
+
+4) ROS-Nachricht versenden:
+
+rostopic pub --once /move_base/result move_base_msgs/MoveBaseActionResult '{status: {status: 1}}'
+
+
+5) ROS-Nachrichten empfangen:
+
+rostopic echo /move_base_simple/goal 
+
+6) Anzahl Threads zu einem Prozess anzeigen lassen
+
+watch -n 1 ps -o nlwp <pid>
+
+
+
+
+
+** ENDE **
