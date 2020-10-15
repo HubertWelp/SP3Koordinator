@@ -15,19 +15,26 @@ roscore
 
 /opt/Qt/Tools/QtCreator/bin/qtcreator
 
-3) ROS-Nachricht versenden:
+3) ROS-Nachricht versenden (Position):
 
 rostopic pub --once /rueckmeldung std_msgs/String "geschafft"
 
 
-4) ROS-Nachricht versenden:
+4) ROS-Nachricht versenden (Breite):
 
-rostopic pub --once /move_base/result move_base_msgs/MoveBaseActionResult '{status: {status: 1}}'
+rostopic pub --once /robot/status std_msgs/String "25"
 
 
 5) ROS-Nachrichten empfangen:
 
-rostopic echo /move_base_simple/goal 
+rostopic echo /robot/pose
+ 
+
+6) chatGui starten zum emulieren des SP3Bildanalysators
+./Programme/build-chatGui-Desktop_Qt_5_11_2_GCC_64bit-Debug/chatGui 127.0.0.1 5843 5842
+SP3Bildanalysator-Nachricht (Beispiel): 1 2 3 4 5
+
+
 
 6) Anzahl Threads zu einem Prozess anzeigen lassen
 
