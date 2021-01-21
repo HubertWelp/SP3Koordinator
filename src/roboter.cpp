@@ -20,7 +20,7 @@ string Roboter::getStatus()
     return m_status;
 }
 
-void Roboter::greife(double x, double y,double z,double phi,double breite)
+void Roboter::greife(float x, float y,float z,float phi,float breite)
 {
     // hier Message an echten Roboter ueber ROSNode senden
     printf("\n greife Objekt  %.1f %.1f %.1f %f %.1f \n",x,y,z,phi,breite);

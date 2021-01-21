@@ -10,8 +10,8 @@ Ausfuehrend::Ausfuehrend( Koordinator* dlg)
 
     //ctor
     printf("A U S F U E H R E N D\n");
-    int x,y,z=0;
-    int breite = 0;
+    float x,y,z=0;
+    float breite = 0;
     float phi=0;
 
     Bildanalysator_Proxy* ba;

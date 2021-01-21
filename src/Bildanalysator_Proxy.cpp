@@ -17,7 +17,7 @@ void Bildanalysator_Proxy::messageReceived(string msg)
 
     // Nachricht analysieren
     bildInfoAuswerten(msg);
-     std::cout << "--Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
+//     std::cout << "--Bildanalysator_Proxy::messageReceived: " << msg << std::endl;
     benachrichtige();
 
 }
@@ -40,7 +40,8 @@ void Bildanalysator_Proxy::bildInfoAuswerten(string ms)
     }
     else
     {
-        std::sscanf(ms.c_str(),"%i %i %i %f %i",&x,&y,&z,&phi,&breite);
+        std::sscanf(ms.c_str(),"%f %f %f %f %f",&x,&y,&z,&phi,&breite);
+//        printf("Bildanalysator_Proxy::Koordinaten: %f %f %f %f %f\n",x,y,z,phi,breite);
         error=false;
     }
 
@@ -48,10 +49,11 @@ void Bildanalysator_Proxy::bildInfoAuswerten(string ms)
 
 int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
 {
+//    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1),"192.168.1.203",5842);
     Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1),"127.0.0.1",5842);
 }
 
-void Bildanalysator_Proxy::getObjektPosition(int* px, int* py, int* pz)
+void Bildanalysator_Proxy::getObjektPosition(float* px, float* py, float* pz)
 {
     (*px)=x;
     (*py)=y;
@@ -63,7 +65,7 @@ float Bildanalysator_Proxy::getObjektOrientierung()
     return phi;
 }
 
-int Bildanalysator_Proxy::getObjektBreite()
+float Bildanalysator_Proxy::getObjektBreite()
 {
     return breite;
 }

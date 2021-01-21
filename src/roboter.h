@@ -17,7 +17,7 @@ public:
      *
      * Sendet Position und Orientierung an den RosNode
      */
-    void greife(double x, double y, double z, double phi,double breite);
+    void greife(float x, float y, float z, float phi, float breite);
 private:
 //    void msgReceivedCallback(const std_msgs::String::ConstPtr& msg);
     void msgReceivedCallback(const std_msgs::String::ConstPtr &msg);

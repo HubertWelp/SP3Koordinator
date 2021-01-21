@@ -33,9 +33,9 @@ public:
 
     void bildInfoAuswerten(std::string ms);
     int bildanalyseStarten(ObjektTyp suessigkeit);
-    void getObjektPosition(int* px, int* py, int* pz);
+    void getObjektPosition(float* px, float* py, float* pz);
     float getObjektOrientierung();
-    int getObjektBreite();
+    float getObjektBreite();
     bool getNichtErkannt();
 
 private:
@@ -49,8 +49,8 @@ private:
 //    void setTagContent(const unsigned char* content, int len);
     bool error = false;
     float phi;
-    int x, y, z;
-    int breite;
+    float x, y, z;
+    float breite;
 
 
 
