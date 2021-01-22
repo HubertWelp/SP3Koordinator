@@ -24,7 +24,11 @@ void Roboter::greife(float x, float y,float z,float phi,float breite)
 {
     // hier Message an echten Roboter ueber ROSNode senden
     printf("\n greife Objekt  %.1f %.1f %.1f %f %.1f \n",x,y,z,phi,breite);
-    rtst->publish(x,y,z,phi);
+
+    rtst->publish(x,y,z,phi/180.0*3.1415926535);
+    string str;
+    str=to_string(breite);
+//    rtst->publish(str);
 
 }
 
