@@ -50,7 +50,7 @@ void Bildanalysator_Proxy::bildInfoAuswerten(string ms)
 int Bildanalysator_Proxy::bildanalyseStarten(Bildanalysator_Proxy::ObjektTyp suessigkeit)
 {
 //    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1),"192.168.1.203",5842);
-    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1),"127.0.0.1",5842);
+    Bildanalysator_Proxy::sendmessage(std::to_string(suessigkeit+1),"192.168.188.30",5842);
 }
 
 void Bildanalysator_Proxy::getObjektPosition(float* px, float* py, float* pz)
