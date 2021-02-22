@@ -45,7 +45,8 @@ int main(int argc, char **argv) {
     pds::MainWindow w(&pD);
     pD.setZustand(new Wartend(&pD));
     w.show();
-    printf("%s\n",setlocale(LC_NUMERIC,"en_GB.UTF-8"));
+    printf("%s\n",setlocale(LC_NUMERIC,"de_DE.UTF-8"));
+    //printf("%s\n",setlocale(LC_NUMERIC,"en_GB.UTF-8"));
     //pD.objektAuswaehlen(Bildanalysator_Proxy::)
     //std::cout <<"\nwert test: "<<Bildanalysator_Proxy::ObjektTyp::Maoam<<"\n";
     //pD.objektAuswaehlen(Bildanalysator_Proxy::ObjektTyp::Maoam);
